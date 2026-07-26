@@ -1,0 +1,496 @@
+aid: spark-platform
+name: Spark Platform
+review:
+  question: >-
+    Is Spark Platform's RESO-certified MLS data surface actually reachable by a developer,
+    and what must be signed or joined to reach it?
+  answer: >-
+    Documented publicly and completely; certified verifiably; not reachable anonymously.
+    Every data endpoint returns HTTP 401 without an MLS-approved API key.
+  date: '2026-07-26'
+  reviewer: API Evangelist
+  homeMarket: United States
+  tier: mls-data-infrastructure
+
+organization:
+  legalOperator: FBS
+  legalOperatorNote: >-
+    Spark Platform is a product of FBS, a 100% employee-owned company headquartered at
+    3415 39th Street South, Fargo, ND 58104 (RESO record lists 4601 33rd Ave S, PO Box 3163,
+    Fargo ND 58104). Per https://sparkplatform.com/about-FBS (HTTP 200), FBS has "over 30
+    years of experience" and "serves over 120 MLS organizations in the U.S. and
+    internationally with its Flexmls system and its Spark(R) Platform."
+  primaryDomain: sparkplatform.com
+  domainNote: >-
+    https://sparkplatform.com/ HTTP 301 -> https://www.sparkapi.io/ (marketing site, HTTP 200).
+    The developer documentation and the OpenID Connect endpoints remain on sparkplatform.com
+    and do NOT redirect: https://sparkplatform.com/docs returns HTTP 200.
+  siblingProducts:
+  - Flexmls Platform
+  - Flexmls IDX
+  - Launch Dashboard
+  - Spark Datamart
+
+resoPosture:
+  summary: >-
+    RESO-certified through FBS as the certifying technology provider (Unique Organization
+    Identifier T00000052, CertificationStatus "Certified Current"). FBS appears as ProviderUoi
+    on RESO Web API Core 2.0.0 and Data Dictionary 1.7 / 2.0 endorsements for 140
+    organizations (138 MLSs, 1 commercial board, and FBS itself). A live RESO Web API OData
+    service exists and answers, but the $metadata contract and every resource return HTTP 401
+    without an MLS-licensed API key. Certified is not the same as reachable, and here the gap
+    is total for an unlicensed developer.
+  certified: true
+  certificationBody: RESO (Real Estate Standards Organization)
+  mandateNote: >-
+    RESO certification is mandated for MLSs by the National Association of REALTORS, an
+    industry body, not a government regulator. Spark's exposure is the vendor side of that
+    mandate.
+  directoryEvidence:
+    source: https://services.reso.org/orgs?showStats=true&showEndorsements=true
+    httpStatus: 200
+    fetched: '2026-07-26'
+    feedTitle: RESO Organizations and Endorsements
+    feedGeneratedOn: '2026-07-26T12:19:21.643Z'
+    organizationsInFeed: 1979
+    fbsRecord:
+      OrganizationUniqueId: T00000052
+      OrganizationType: Technology Company
+      OrganizationName: FBS
+      OrganizationCity: Fargo
+      OrganizationStateOrProvince: ND
+      OrganizationCountry: USA
+      OrganizationWebsite: https://flexmls.com/
+      CertificationStatus: Certified Current
+      CertificationSummaryUrl: https://certification.reso.org/summary/T00000052
+      CertificationSummaryUrlProbe: >-
+        HTTP 400 to a plain HTTPS GET on 2026-07-26 (RESO Analytics is a browser
+        application, not a machine-readable endpoint). Not cited as a live artifact.
+      Endorsements:
+      - Endorsement: webhooks
+        Version: 1.0.0
+        Status: Certified
+        StatusUpdatedAt: '2024-10-22T15:23:06.495Z'
+      - Endorsement: RESO Common Format
+        Version: '2.0'
+        Status: Certified
+        StatusUpdatedAt: '2024-10-22T15:22:50.749Z'
+    endorsementsWhereFbsIsProvider:
+      organizationsCovered: 140
+      organizationTypes:
+        MLS: 138
+        Commercial: 1
+        Technology Company: 1
+      countries:
+        USA: 139
+        Romania: 1
+      byEndorsementAndVersion:
+      - endorsement: Web API Core
+        version: 2.0.0
+        certified: 115
+        passed: 24
+      - endorsement: Data Dictionary
+        version: '1.7'
+        certified: 110
+        passed: 19
+      - endorsement: Data Dictionary
+        version: '2.0'
+        certified: 72
+        passed: 17
+      - endorsement: RESO Common Format
+        version: '2.0'
+        certified: 1
+      - endorsement: webhooks
+        version: 1.0.0
+        certified: 1
+      note: >-
+        These endorsements are held by the individual MLS organizations with FBS recorded as
+        ProviderUoi. Certification therefore attaches to the MLS, not to Spark as a callable
+        product, which is exactly why a certified endpoint can still be unreachable.
+  vendorClaimVerbatim: >-
+    From https://sparkplatform.com/docs/reso/overview (HTTP 200): "Built within the Spark(R)
+    API is a /Reso/OData endpoint that implements the RESO Web API and provides data using the
+    RESO Data Dictionary. The documentation we provide does not fully document the RESO Web
+    API itself; rather, it's meant to get you up and running on our implementation of the
+    standard."
+  odataEndpoints:
+  - url: https://replication.sparkapi.com/Version/3/Reso/OData/
+    label: RESO Web API version 3 service root (recommended by FBS)
+    httpStatus: 401
+  - url: https://replication.sparkapi.com/Version/3/Reso/OData/$metadata
+    label: OData $metadata document — the machine-readable contract
+    httpStatus: 401
+  - url: https://replication.sparkapi.com/Reso/OData/
+    label: RESO Web API version 2 service root (legacy)
+    httpStatus: 401
+  - url: https://replication.sparkapi.com/Version/2/Reso/OData/
+    label: RESO Web API version 2 service root, explicit version path (legacy)
+    httpStatus: 401
+  odata401Body: '{"error":{"code":401,"message":"Invalid API key and/or request signed improperly"}}'
+  odataResources:
+  - Property
+  - Member
+  - Office
+  - Media
+  - OpenHouse
+  - Room
+  - Unit
+  - Green Verification
+  - Power Production
+  - Lookup
+  dataDictionaryVersionsInProduct: >-
+    https://sparkplatform.com/docs/supporting_documentation/reso_dictionary (HTTP 200) states
+    that "Spark(R) API supports multiple RESO Data Dictionary versions" and that "all
+    currently supported versions are advertised in the System Info service"; the page names
+    0.8 as the default and shows 1.3 in an example. The System Info service that would
+    enumerate the live set is itself key-gated, so the authoritative in-product version list
+    could not be read anonymously. The certified versions (1.7 and 2.0) come from the RESO
+    feed, not from the product.
+  universalPropertyIdentifier:
+    found: false
+    note: >-
+      No reference to the RESO Universal Property Identifier (UPI) was found in the Spark
+      documentation navigation, the RESO Web API section, or the resource pages probed on
+      2026-07-26. Absence is the finding; it is not evidence that UPI is unsupported in the
+      underlying data.
+
+accessGate:
+  classification: licence-agreement
+  gated: true
+  summary: >-
+    Two-stage gate. Stage one is a free, public, self-serve developer registration form that
+    is reviewed and activated within three business days and yields demo credentials only.
+    Stage two — any real MLS data — requires a signed FBS Developer Agreement, selection of an
+    IDX, VOW or Private role, and enrolment in an MLS-specific data plan through the Spark
+    Datamart via a "PURCHASE WITH APPROVAL" action that the MLS approves; where no plan exists
+    the developer must contact the MLS directly. Pricing published on the FBS developer page
+    is a flat 50 USD per month per MLS.
+  whatMustBeSignedOrJoined:
+  - FBS Developer Agreement and Terms of Use (https://sparkplatform.com/docs/terms_of_use/developer_agreement_and_terms_of_use, HTTP 200)
+  - An MLS data plan enrolment accepted through the Spark Datamart (https://sparkplatform.com/appstore/datamart, HTTP 200), approved by the MLS
+  - A role assignment of IDX, VOW or Private, which binds the developer to the MLS Rules and License Terms for that role
+  - For OpenID Connect keys specifically, separate MLS approval is required
+  - MLS Platform License Agreement and MLS Member Terms of Use govern the surrounding relationship (both published under /docs/terms_of_use/)
+  steps:
+    source: https://sparkplatform.com/docs/overview/set_up_access
+    httpStatus: 200
+    verbatim: >-
+      Register as an API developer using the form at /register/developers (free; activation
+      within 3 business days; demo API credentials issued on approval). Choose a key type
+      (bearer token, or OpenID Connect which requires MLS approval). Choose a role (IDX for
+      public display, Private for agent/broker-only use, VOW for password-protected consumer
+      displays). Log in at https://sparkplatform.com/ticket and check the Spark Datamart at
+      https://sparkplatform.com/appstore/datamart for an available MLS data plan. If a plan
+      exists, accept the terms and submit a description of intended use via "PURCHASE WITH
+      APPROVAL". If no suitable plan exists, contact the MLS directly.
+  registrationForm:
+    url: https://sparkplatform.com/register/developers
+    httpStatus: 200
+    selfServe: true
+    note: >-
+      The form itself is open to anyone with no login. It is the only self-serve step. It does
+      not by itself yield production MLS data.
+  sandbox:
+    exists: partial
+    note: >-
+      "Demo API credentials" are described as issued after registration approval. No open,
+      credential-free sandbox host was found; alpha.sparkplatform.com/docs returns HTTP 200
+      but is a documentation site, not an unauthenticated sandbox API.
+  documentationIsPublic: true
+  mlsCoverage:
+    vendorClaim: over 120 MLS organizations (Flexmls plus Spark), per /about-FBS
+    resoDerived: 138 MLS organizations plus 1 commercial board carry RESO endorsements with FBS as ProviderUoi
+    perMlsNote: >-
+      Coverage is per-MLS. A developer key is scoped to the MLSs whose data plans that
+      developer has been approved for; there is no single national feed.
+
+openData:
+  exists: false
+  note: >-
+    No open, unlicensed, publicly callable dataset is published by Spark Platform. All listing
+    content is MLS Content licensed to FBS by each MLS and re-licensed to developers under
+    IDX, VOW or Private role terms. The Developer Agreement defines "MLS Content" as
+    information provided by the MLS to FBS, which forecloses open redistribution. This is the
+    US private-cooperative pattern, with no government open-data counterweight in this tier.
+
+authModel:
+  primary: OAuth 2 bearer access token
+  verbatim: >-
+    https://sparkplatform.com/docs/authentication/access_token (HTTP 200): "For the
+    Authorization header you will use Bearer <your_access_token>." Developers receive "an
+    OAuth key (API feed ID) and a non-expiring access token, enabling direct access to the
+    RESO Web API and Spark(R) API." HTTPS is required; Authorization and Accept headers are
+    both required.
+  schemes:
+  - name: OAuth 2 bearer token
+    documented: true
+    url: https://sparkplatform.com/docs/authentication/access_token
+  - name: OpenID Connect
+    documented: true
+    url: https://sparkplatform.com/docs/authentication/openid_connect_authentication
+    note: Requires MLS approval; used where agents authenticate with their Flexmls credentials.
+  - name: SAML
+    documented: true
+    url: https://sparkplatform.com/docs/authentication/saml
+    note: SAML service-provider integration with flexmls Web.
+  - name: Legacy API key with request signing
+    documented: true
+    note: >-
+      Implied by the 401 body "Invalid API key and/or request signed improperly" returned by
+      both sparkapi.com/v1 and the OData endpoints.
+  openidConnectDiscovery:
+    url: https://sparkplatform.com/.well-known/openid-configuration
+    httpStatus: 200
+    fetched: '2026-07-26'
+    savedAs: authentication/spark-platform-openid-configuration.json
+    issuer: https://sparkplatform.com
+    authorizationEndpoint: https://sparkplatform.com/openid/authorize
+    tokenEndpoint: https://sparkplatform.com/openid/token
+    userinfoEndpoint: https://sparkplatform.com/openid/userinfo
+    revocationEndpoint: https://sparkplatform.com/openid/revoke
+    jwksUri: https://sparkplatform.com/openid/jwks.json
+    idTokenSigningAlgValuesSupported:
+    - RS256
+    scopesSupported:
+    - openid
+    - profile
+    - email
+    - address
+    - phone
+    - RESO
+    - FBS
+    realEstateSpecificClaims:
+    - MemberMlsId
+    - MemberNrdsId
+    - MemberStateLicense
+    - MemberAOR
+    - MemberAORkey
+    - MemberPrimaryAorId
+    - MemberPrimaryAorKey
+    - MemberType
+    - MemberStatus
+    - OfficeKey
+    - Office
+    - OfficeMlsId
+    - FlexmlsMemberType
+    - mls_system_access
+    note: >-
+      This is the only machine-readable contract Spark serves anonymously. It is notable in
+      its own right: the scope list includes a RESO scope, and the claim set encodes MLS
+      membership, NRDS ID, state licence and association of REALTORS keys — the identity
+      substrate of the licensing gate itself.
+  jwks:
+    url: https://sparkplatform.com/openid/jwks.json
+    httpStatus: 200
+    fetched: '2026-07-26'
+    savedAs: authentication/spark-platform-openid-jwks.json
+
+downloadableContracts:
+  openapiHarvested: false
+  specsCount: 0
+  odataMetadataHarvested: false
+  summary: >-
+    No OpenAPI, Swagger or Postman collection is published, and the OData $metadata document —
+    which would be the machine-readable contract for the RESO Web API — is behind the same 401
+    as the data. The documentation is hand-written HTML across roughly 150 pages. The only
+    machine-readable artifacts retrievable anonymously are the OpenID Connect discovery
+    document and its JWKS, both saved verbatim under authentication/.
+  probes:
+  - url: https://sparkplatform.com/openapi.json
+    httpStatus: 404
+  - url: https://sparkplatform.com/swagger.json
+    httpStatus: 404
+  - url: https://sparkplatform.com/docs/api-docs
+    httpStatus: 302
+    note: Redirects to https://sparkplatform.com/docs/api_docs which returns HTTP 404.
+  - url: https://sparkplatform.com/docs/api_docs
+    httpStatus: 404
+  - url: https://developers.sparkplatform.com/
+    httpStatus: 000
+    note: Does not resolve.
+  - url: https://replication.sparkapi.com/Version/3/Reso/OData/$metadata
+    httpStatus: 401
+  - url: https://replication.sparkapi.com/Version/3/Reso/OData/Property
+    httpStatus: 401
+  - url: https://sparkapi.com/v1/system
+    httpStatus: 401
+    body: '{"D":{"Message":"Invalid API key and/or request signed improperly","Code":1000,"Success":false}}'
+  - url: https://sparkapi.com/v1/listings
+    httpStatus: 401
+  - url: https://sparkplatform.com/.well-known/openid-configuration
+    httpStatus: 200
+    saved: authentication/spark-platform-openid-configuration.json
+  - url: https://sparkplatform.com/openid/jwks.json
+    httpStatus: 200
+    saved: authentication/spark-platform-openid-jwks.json
+
+webhooksEventsSdks:
+  webhooks:
+    exists: true
+    url: https://sparkplatform.com/docs/webhooks/webhooks
+    httpStatus: 200
+    transport: HTTPS POST, Content-Type application/json
+    payload: RESO Web API Entity Event convention
+    authenticity: HMAC-SHA256 signature in the Signature header
+    retries: Up to 3 attempts with exponential backoff
+    timeout: Endpoint must respond within roughly 2 seconds
+    userAgent: NotificationSystem/0.1
+    resourceTypes:
+    - Property
+    - Member
+    - Office
+    features:
+    - Filtering by MLS and resource type
+    - Catch-up replay
+    certification: FBS holds a RESO webhooks 1.0.0 endorsement (Certified, 2024-10-22)
+    subscription: Arranged with FBS; not self-provisioned from the public docs.
+  sdks:
+    githubOrganization: https://github.com/sparkapi
+    httpStatus: 200
+    firstPartyClients:
+    - spark_api (Ruby client library for communication with the Spark API)
+    - sparkapi4p2 (PHP wrapper for the flexmls REST API)
+    - SparkJava (Java interface for use with the Spark API)
+    - SparkiOS (Objective-C)
+    - SparkAndroid (Java example app)
+    - sparkql (Racc-based parser for the Spark API filter syntax)
+    - reso_replicator_ruby (example for replicating listing data and pulling updates)
+    - feed-faker (RESO-compliant data feed faker, PHP)
+    - wordpress-plugin (PHP)
+    note: >-
+      A real, first-party, multi-language SDK estate exists. Several repositories are long
+      dormant; freshness was not assessed in this bootstrap pass.
+  postman:
+    exists: false
+    note: No Postman collection or workspace was found for Spark Platform or FBS.
+  legacyInterface:
+    name: RETS
+    url: https://sparkplatform.com/docs/rets/overview
+    httpStatus: 200
+    note: >-
+      RETS remains documented alongside the APIs, including a RETS Listing Activity API and
+      MLS-facing tooling. RETS hosts are per-MLS and were not probed; RETS is not listed in
+      apis.yml because it has no single documented base URL and is the interface FBS is
+      actively migrating away from (see /docs/overview/api_vs_rets).
+
+findings:
+  summary: >-
+    Spark Platform is the clearest example in this sector of the gap the study exists to
+    measure. The documentation is public, deep and unusually well organised — roughly 150
+    pages covering authentication, about 120 API services, webhooks, SparkQL grammar,
+    replication, RESO resources, RETS and six separate terms-of-use documents — and none of it
+    is behind a login. The certification is real and independently verifiable in RESO's own
+    machine-readable organizations feed, with FBS recorded as the certifying provider on Web
+    API Core 2.0.0 and Data Dictionary 1.7 and 2.0 endorsements for 138 MLSs. The endpoints
+    are live and answer immediately. And an unaffiliated developer cannot retrieve a single
+    row, or even the $metadata document that describes the schema, because the licence, not
+    the technology, is the gate. Registration is free and self-serve; data is not. That
+    two-stage structure — open documentation, open registration, licensed data — is the
+    honest shape of US MLS infrastructure, and it is why "RESO certified" must never be
+    reported as "publicly callable."
+  strengths:
+  - Public, complete, login-free documentation across the whole surface
+  - Independently verifiable RESO certification with a machine-readable directory record
+  - Two interfaces offered: proprietary Spark API and standards-based RESO Web API OData
+  - Real outbound webhooks on the RESO Entity Event convention with HMAC-SHA256 signing, separately certified
+  - First-party SDKs in Ruby, PHP, Java, Objective-C and a SparkQL parser
+  - Anonymously retrievable OpenID Connect discovery document with real-estate-specific identity claims
+  - Published flat developer pricing (50 USD per month per MLS)
+  gaps:
+  - No OpenAPI, Swagger or Postman collection anywhere
+  - The OData $metadata contract is 401-gated, so the machine-readable schema cannot be read before signing
+  - No open, credential-free sandbox API
+  - No RESO Universal Property Identifier reference found in the documentation
+  - The in-product Data Dictionary version list is only readable through the key-gated System Info service
+  - Coverage is per-MLS; there is no national feed and no published list of which MLSs a developer can reach
+
+sources:
+- url: https://sparkplatform.com/docs
+  httpStatus: 200
+  type: Documentation
+  note: Root of the public developer documentation; full navigation of about 150 pages.
+- url: https://sparkplatform.com/docs/overview/api
+  httpStatus: 200
+  type: Documentation
+  note: >-
+    "The Spark API allows authorized MLS members to request data through developer
+    applications according to the permissions and license requirements of the MLS."
+- url: https://sparkplatform.com/docs/overview/set_up_access
+  httpStatus: 200
+  type: Documentation
+  note: The six-step access process, including the Spark Datamart "PURCHASE WITH APPROVAL" step.
+- url: https://sparkplatform.com/docs/reso/overview
+  httpStatus: 200
+  type: Documentation
+  note: RESO Web API version 3 service root, $metadata location, and the ten OData resources.
+- url: https://sparkplatform.com/docs/authentication/access_token
+  httpStatus: 200
+  type: Authentication
+  note: Bearer token scheme and required headers.
+- url: https://sparkplatform.com/docs/webhooks/webhooks
+  httpStatus: 200
+  type: Documentation
+  note: RESO Entity Event payloads, HMAC-SHA256 Signature header, retries and replay.
+- url: https://sparkplatform.com/docs/api_services/read_first
+  httpStatus: 200
+  type: APIReference
+  note: Source of the confirmed Spark API base URL https://sparkapi.com/v1.
+- url: https://sparkplatform.com/docs/supporting_documentation/reso_dictionary
+  httpStatus: 200
+  type: Documentation
+  note: Data Dictionary version handling; defers the live list to the key-gated System Info service.
+- url: https://sparkplatform.com/docs/terms_of_use/developer_agreement_and_terms_of_use
+  httpStatus: 200
+  type: TermsOfService
+  note: Defines Developer Agreement, MLS Content, IDX, Members, Field Mapper (RESO mapping).
+- url: https://sparkplatform.com/about-FBS
+  httpStatus: 200
+  type: Website
+  note: FBS employee ownership, 30-plus years, over 120 MLS organizations, Fargo ND address.
+- url: https://www.sparkapi.io/developers/
+  httpStatus: 200
+  type: Pricing
+  note: '"FBS has simple developer pricing for the APIs at a flat fee of $50 per month per MLS."'
+- url: https://sparkplatform.com/register/developers
+  httpStatus: 200
+  type: SignUp
+  note: Public self-serve developer registration form.
+- url: https://services.reso.org/orgs?showStats=true&showEndorsements=true
+  httpStatus: 200
+  type: Certification
+  note: >-
+    RESO Organizations and Endorsements feed, generated 2026-07-26T12:19:21.643Z, 1,979
+    organizations. Source of the FBS record (T00000052) and every endorsement count above.
+- url: https://www.reso.org/certification/
+  httpStatus: 200
+  type: Reference
+  note: Points to the certificates list and to the machine-readable UOI/endorsement feed.
+- url: https://www.reso.org/api-guide/
+  httpStatus: 200
+  type: Reference
+  note: >-
+    RESO's own Web API Transition Guide lists "FBS (Flexmls) Spark API" and links directly to
+    http://sparkplatform.com/docs/reso/overview.
+- url: https://github.com/sparkapi
+  httpStatus: 200
+  type: GitHubOrganization
+  note: First-party SDKs and examples.
+- url: https://sparkplatform.com/.well-known/openid-configuration
+  httpStatus: 200
+  type: OpenIDConnectDiscovery
+  note: Harvested verbatim.
+- url: https://sparkplatform.com/openid/jwks.json
+  httpStatus: 200
+  type: JSONWebKeySet
+  note: Harvested verbatim.
+
+actions:
+  apisListed: 3
+  artifactsSaved:
+  - authentication/spark-platform-openid-configuration.json
+  - authentication/spark-platform-openid-jwks.json
+  openapiDirectoryCreated: false
+  openapiDirectoryReason: >-
+    No OpenAPI, Swagger or OData $metadata document could be retrieved. The only candidate,
+    https://replication.sparkapi.com/Version/3/Reso/OData/$metadata, returned HTTP 401. Nothing
+    was fabricated or reconstructed.
