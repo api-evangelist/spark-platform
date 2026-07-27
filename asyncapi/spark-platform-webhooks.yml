@@ -1,0 +1,78 @@
+generated: '2026-07-26'
+method: searched
+source: >-
+  https://sparkplatform.com/docs/webhooks/webhooks (HTTP 200),
+  https://services.reso.org/orgs?showStats=true&showEndorsements=true (RESO webhooks 1.0.0
+  endorsement held directly by FBS, Status Certified, updated 2024-10-22), plus the
+  /v1/developers/newsfeeds/webhooks request in the vendor's public Postman collection.
+spec_type: Webhooks
+description: >-
+  Spark Platform's event surface. FBS publishes no AsyncAPI document — the webhook contract is
+  prose plus the RESO Web API Entity Event convention it implements — so this artifact captures
+  the webhook catalog rather than fabricating a spec. It is a genuinely certified event
+  surface: FBS holds the RESO webhooks 1.0.0 endorsement directly, not through an MLS. Delivery
+  is outbound only; there is no self-service subscription API in the public documentation, and
+  subscriptions are arranged with FBS.
+
+asyncapi_document:
+  published: false
+  probed:
+    - {url: 'https://sparkplatform.com/asyncapi.yaml', note: not published}
+    - {url: 'https://sparkplatform.com/docs/webhooks/webhooks', status: 200, note: prose documentation only}
+
+transport:
+  protocol: HTTPS
+  method: POST
+  content_type: application/json
+  user_agent: NotificationSystem/0.1
+  timeout: Subscriber endpoint must respond within roughly 2 seconds.
+  retries: Up to 3 attempts with exponential backoff.
+
+security:
+  signature_header: Signature
+  algorithm: HMAC-SHA256
+  note: Each delivery is signed so the subscriber can verify authenticity.
+
+payload:
+  convention: RESO Web API Entity Event
+  note: >-
+    Payloads follow the RESO Entity Event shape rather than a Spark-proprietary envelope,
+    which is what the webhooks 1.0.0 endorsement certifies.
+
+events:
+  - resource: Property
+    trigger: A listing record changes in an upstream MLS.
+  - resource: Member
+    trigger: A member record changes in an upstream MLS.
+  - resource: Office
+    trigger: An office record changes in an upstream MLS.
+
+subscription:
+  self_service: false
+  how: Arranged with FBS; not provisioned from the public documentation.
+  filters: [MLS, resource type]
+  catch_up_replay: true
+  related_endpoint:
+    path: /v1/developers/newsfeeds/webhooks
+    method: GET
+    host: https://replication.sparkapi.com
+    source: postman/spark-platform-spark-web-api-queries.postman_collection.json
+    note: >-
+      A "Developers: News Feed Webhooks" request exists in the vendor's own Postman collection,
+      so a developer-facing read endpoint for newsfeed webhooks does exist behind the licence
+      gate. Its request/response schema is not published.
+
+certification:
+  endorsement: RESO webhooks
+  version: 1.0.0
+  status: Certified
+  status_updated_at: '2024-10-22'
+  holder: FBS (T00000052)
+  verifiable_at: https://services.reso.org/orgs?showStats=true&showEndorsements=true
+
+streaming:
+  exists: false
+  note: >-
+    No websocket, SSE, Kafka or pub/sub surface is documented. Bulk data movement is handled by
+    polling the replication host — see /docs/supporting_documentation/spark_replication and
+    /docs/reso/reso_replication.

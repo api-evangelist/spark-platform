@@ -1,0 +1,54 @@
+generated: '2026-07-26'
+method: searched
+source: >-
+  https://sparkplatform.com/docs/overview/faq (HTTP 200, fetched 2026-07-26) and the "Flexmls
+  WordPress Plugin and Smartframe" page listed in the Platform Overview section of
+  https://sparkplatform.com/docs; https://github.com/sparkapi/wordpress-plugin.
+description: >-
+  Spark's client-side display surface, recorded with the vendor's own framing. FBS is explicit
+  that the APIs themselves ship no display component — the FAQ answers "Do the APIs have a
+  display component I can add to my website?" with "No. Our APIs are raw data feeds meant to be
+  used by web developers." The prebuilt listing-display products (IDX WordPress plugin,
+  SmartFrame) are separately sold FBS products, not API-level UI libraries, and are bought
+  through fbsproducts.com rather than provisioned from a developer key. They are catalogued
+  here because they are the real embeddable surface an integrator is pointed at, but they are
+  not equivalent to a vendor element/component library.
+
+api_level_components:
+  exists: false
+  vendor_statement: >-
+    "No. Our APIs are raw data feeds meant to be used by web developers. If you're interested in
+    prebuilt listing display solutions you can easily include on your website, you may be
+    interested in our IDX WordPress Plugin or SmartFrame."
+  source: https://sparkplatform.com/docs/overview/faq
+
+prebuilt_display_products:
+  - name: Flexmls IDX WordPress Plugin
+    family: prebuilt-idx
+    embed: WordPress plugin
+    docs: https://sparkplatform.com/docs
+    purchase: https://fbsproducts.com
+    open_source_predecessor:
+      repo: https://github.com/sparkapi/wordpress-plugin
+      archived: true
+      last_push: '2018-04-06'
+    note: Renders IDX listing search and detail inside a WordPress site without direct API work.
+  - name: SmartFrame
+    family: prebuilt-idx
+    embed: Framed/embedded listing display included in an existing website
+    purchase: https://fbsproducts.com
+    note: >-
+      The hosted embed option for agents and brokers who need IDX display without building
+      against the API.
+
+sales_contact:
+  site: https://fbsproducts.com
+  phone: 866-320-9977
+  email: idx@flexmls.com
+
+related:
+  packages: packages/spark-platform-packages.yml
+  note: >-
+    Server-side client libraries (Ruby, PHP, Java, Objective-C, Android) are catalogued in
+    packages/. No browser JavaScript SDK, web-component library or hosted developer console is
+    published.

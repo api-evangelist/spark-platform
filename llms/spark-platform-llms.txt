@@ -1,0 +1,98 @@
+# Spark Platform
+
+> Spark Platform is the MLS data platform built by FBS, a 100% employee-owned company in Fargo,
+> North Dakota that operates the Flexmls MLS system for more than 120 MLS organizations. Spark
+> exposes MLS content to third-party developers through two interfaces: the proprietary Spark
+> API (SparkQL filtering over listings, contacts, saved searches, market statistics and
+> portals) and a RESO Web API (OData) implementation serving the RESO Data Dictionary. FBS is a
+> RESO Certified technology provider (UOI T00000052, "Certified Current"). The documentation is
+> fully public and unusually complete; the data is not. Every data endpoint — including the
+> OData $metadata document — returns HTTP 401 without an MLS-approved key, and real data
+> requires a signed FBS Developer Agreement plus an MLS-approved data plan at USD 50/month per
+> MLS.
+
+Provenance: generated 2026-07-26 by the API Evangelist enrichment pipeline from
+https://github.com/api-evangelist/spark-platform (apis.yml + harvested artifacts). FBS does not
+publish an llms.txt (https://sparkplatform.com/llms.txt returns 404), and
+https://sparkplatform.com/robots.txt disallows every named AI crawler — treat the links below
+as pointers for a human or a licensed integration, not as a crawl list.
+
+## APIs
+
+- [Spark API](https://sparkplatform.com/docs/overview/api): Proprietary REST API over Flexmls
+  MLS content. Base URL https://sparkapi.com/v1 (read/bulk traffic:
+  https://replication.sparkapi.com/v1). Listings and their photos, videos, virtual tours,
+  documents, floor plans, rooms, units, history and rules; contacts; saved searches; listing
+  carts; portals/VOW accounts; market statistics; overlays; standard and custom field metadata;
+  system info; developer key/role/domain/usage administration. Filtering uses SparkQL.
+- [Spark RESO Web API](https://sparkplatform.com/docs/reso/overview): RESO Web API
+  implementation as an OData service at
+  https://replication.sparkapi.com/Version/3/Reso/OData/. Resources: Property, Member, Office,
+  Media, OpenHouse, Room, Unit, GreenVerification, PowerProduction, Lookup, Teams.
+- [Spark Webhooks](https://sparkplatform.com/docs/webhooks/webhooks): Outbound RESO Entity
+  Event deliveries for Property, Member and Office changes, HMAC-SHA256 signed, 3 retries,
+  ~2s response timeout, catch-up replay. FBS holds the RESO webhooks 1.0.0 endorsement.
+
+## Specs and machine-readable artifacts
+
+- [OpenID Connect discovery](https://sparkplatform.com/.well-known/openid-configuration): the
+  only machine-readable contract Spark serves anonymously.
+- [JWKS](https://sparkplatform.com/openid/jwks.json)
+- [Spark Web API Queries (Postman)](https://documenter.getpostman.com/view/25548936/2s935snM26):
+  the vendor's public collection, 64 real requests across both surfaces.
+- OpenAPI/Swagger: none published. Probes of /openapi.json, /openapi.yaml, /swagger.json,
+  /v1/openapi.json, /api-docs on sparkapi.com, replication.sparkapi.com and sparkplatform.com
+  all returned 404 on 2026-07-26.
+- OData $metadata: https://replication.sparkapi.com/Version/3/Reso/OData/$metadata — HTTP 401
+  anonymously; the schema cannot be read before signing.
+
+## Docs
+
+- [Documentation home](https://sparkplatform.com/docs)
+- [How to set up API access](https://sparkplatform.com/docs/overview/set_up_access)
+- [Which API is right for you?](https://sparkplatform.com/docs/overview/which_api)
+- [Authentication / access token](https://sparkplatform.com/docs/authentication/access_token)
+- [OpenID Connect](https://sparkplatform.com/docs/authentication/openid_connect_authentication)
+- [SAML](https://sparkplatform.com/docs/authentication/saml)
+- [API services overview](https://sparkplatform.com/docs/api_services/read_first)
+- [Search and paging syntax](https://sparkplatform.com/docs/supporting_documentation/search_and_paging_syntax)
+- [SparkQL grammar](https://sparkplatform.com/docs/supporting_documentation/sparkql_grammar)
+- [Standard response format](https://sparkplatform.com/docs/supporting_documentation/standard_response_format)
+- [Error codes](https://sparkplatform.com/docs/supporting_documentation/error_codes)
+- [Expansions](https://sparkplatform.com/docs/supporting_documentation/expansions)
+- [Roles (IDX / VOW / Private / Public / Portal)](https://sparkplatform.com/docs/supporting_documentation/roles)
+- [RESO Dictionary versions](https://sparkplatform.com/docs/supporting_documentation/reso_dictionary)
+- [API clients](https://sparkplatform.com/docs/supporting_documentation/api_clients)
+- [RETS overview (legacy, being superseded)](https://sparkplatform.com/docs/rets/overview)
+- [FAQ](https://sparkplatform.com/docs/overview/faq)
+
+## Access and commercial
+
+- [Developer registration (free, self-serve)](https://sparkplatform.com/register/developers)
+- [Pricing — USD 50/month per MLS](https://www.sparkapi.io/developers/)
+- [Spark Datamart (MLS data plans)](https://sparkplatform.com/appstore/datamart)
+- [Developer Agreement and Terms of Use](https://sparkplatform.com/docs/terms_of_use/developer_agreement_and_terms_of_use)
+- [Privacy Policy](https://sparkplatform.com/docs/terms_of_use/privacy)
+- Support: api-support@sparkplatform.com
+
+## SDKs
+
+- [spark_api (Ruby)](https://rubygems.org/gems/spark_api)
+- [sparkql (Ruby, SparkQL parser)](https://rubygems.org/gems/sparkql)
+- [sparkapi/sparkapi (PHP)](https://packagist.org/packages/sparkapi/sparkapi)
+- [SparkJava (Java, source only)](https://github.com/sparkapi/SparkJava)
+- [SparkiOS (Objective-C, source only)](https://github.com/sparkapi/SparkiOS)
+- [feed-faker (RESO-compliant fake data feed)](https://github.com/sparkapi/feed-faker)
+- [GitHub organization](https://github.com/sparkapi)
+
+## Certification
+
+- [RESO organizations and endorsements feed](https://services.reso.org/orgs?showStats=true&showEndorsements=true):
+  FBS UOI T00000052, "Certified Current"; ProviderUoi on Web API Core 2.0.0 and Data Dictionary
+  1.7/2.0 endorsements for 140 organizations; holds RESO webhooks 1.0.0 and RESO Common Format
+  2.0 directly.
+
+## Optional
+
+- [API Evangelist profile](https://apis.io/spark-platform/)
+- [Repository of harvested artifacts](https://github.com/api-evangelist/spark-platform)

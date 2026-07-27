@@ -1,0 +1,45 @@
+generated: '2026-07-26'
+method: searched
+source: https://sparkplatform.com/.well-known/openid-configuration
+docs: https://sparkplatform.com/docs/authentication/openid_connect_authentication
+description: >-
+  Spark Platform's OAuth/OIDC scope surface, read from the live OpenID Connect discovery
+  document (HTTP 200, harvested verbatim to
+  authentication/spark-platform-openid-configuration.json). Scopes govern the identity surface
+  only — the seven advertised scopes are the standard OIDC set plus two vendor scopes, RESO and
+  FBS. Data authorization on the Spark API and RESO Web API is not scope-based: it is governed
+  by the role assigned to the API key (IDX, VOW, Private, Public, Portal) and by the MLS data
+  plans the developer has been approved for. No published scope-to-resource reference page was
+  found, so scope descriptions below the standard OIDC four are recorded as undocumented rather
+  than guessed.
+schemes:
+  - name: Spark OpenID Connect
+    type: openIdConnect
+    source: https://sparkplatform.com/.well-known/openid-configuration
+    issuer: https://sparkplatform.com
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://sparkplatform.com/openid/authorize
+        tokenUrl: https://sparkplatform.com/openid/token
+        revocationUrl: https://sparkplatform.com/openid/revoke
+    token_endpoint_auth_methods: [client_secret_post, client_secret_basic]
+
+scopes:
+  - {scope: openid, description: "Standard OIDC scope — requests an ID token for the authenticating flexmls member.", flows: [authorizationCode], sources: [.well-known/openid-configuration]}
+  - {scope: profile, description: "Standard OIDC profile claims (name, given_name, family_name, middle_name, preferred_username, picture, website, zoneinfo) plus Spark's MemberNameSuffix.", flows: [authorizationCode], sources: [.well-known/openid-configuration]}
+  - {scope: email, description: Standard OIDC email and email_verified claims., flows: [authorizationCode], sources: [.well-known/openid-configuration]}
+  - {scope: address, description: Standard OIDC address claim., flows: [authorizationCode], sources: [.well-known/openid-configuration]}
+  - {scope: phone, description: Standard OIDC phone_number and phone_number_verified claims., flows: [authorizationCode], sources: [.well-known/openid-configuration]}
+  - {scope: RESO, description: "Vendor scope. Advertised in scopes_supported; no published description was found. Associated with the RESO-standard member identity claims (MemberMlsId, MemberNrdsId, MemberStateLicense, MemberAOR, MemberAORkey, MemberPrimaryAorId, MemberPrimaryAorKey, MemberType, MemberStatus, OfficeKey, OfficeMlsId).", flows: [authorizationCode], sources: [.well-known/openid-configuration], documented: false}
+  - {scope: FBS, description: "Vendor scope. Advertised in scopes_supported; no published description was found. Associated with the Flexmls-proprietary claims (FlexmlsMemberType, UserType, UserLevel, mls_system_access, user_is_visible, user_is_enabled, user_is_active, user_is_billable, user_profile_visible).", flows: [authorizationCode], sources: [.well-known/openid-configuration], documented: false}
+
+claims_supported:
+  standard: [sub, iss, name, given_name, family_name, middle_name, preferred_username, website, address, phone_number, phone_number_verified, picture, email, email_verified, zoneinfo]
+  real_estate: [MemberNameSuffix, MemberMlsId, MemberNrdsId, MemberStateLicense, MemberAOR, MemberAORkey, MemberPrimaryAorId, MemberPrimaryAorKey, MemberType, MemberStatus, OfficeKey, Office, OfficeMlsId, FlexmlsMemberType, UserType, UserLevel, mls_system_access, user_is_visible, user_profile_visible, user_is_enabled, user_is_active, user_is_billable]
+
+notes:
+  - OIDC keys require separate MLS approval beyond the standard developer registration.
+  - >-
+    Data-level authorization is role-based, not scope-based — see
+    authentication/spark-platform-authentication.yml and
+    https://sparkplatform.com/docs/supporting_documentation/roles.

@@ -1,0 +1,83 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: Spark Platform
+providerId: spark-platform
+generated: '2026-07-26'
+method: searched
+created: '2026-07-26'
+modified: '2026-07-26'
+tags:
+  - Rate Limiting
+  - MLS
+  - Real Estate
+description: >-
+  Spark Platform publishes no numeric request-rate limit. What it publishes is the throttle
+  signal (HTTP 429 with Spark error code 1550 "Over rate limit") and a set of hard per-request
+  ceilings on the pagination parameters, which are the only numbers FBS states in the open. The
+  request-size ceilings differ by key role: a standard key may ask for at most 25 records per
+  request, a replication-role key up to 1000. Long-running requests are cancelled server-side
+  rather than queued (codes 1515 and 1516). No RateLimit-* or X-RateLimit-* response headers are
+  documented, so a client cannot see its remaining budget — it learns by being refused.
+sources:
+  - https://sparkplatform.com/docs/supporting_documentation/error_codes
+  - https://sparkplatform.com/docs/supporting_documentation/search_and_paging_syntax
+  - https://sparkplatform.com/docs/supporting_documentation/spark_replication
+
+headers:
+  rateLimitRemaining: null
+  retryAfter: null
+  note: No rate-limit or retry headers are documented.
+
+responseCodes:
+  throttled: 429
+  throttledProviderCode: 1550
+  timeoutCancelled: 503
+  timeoutProviderCodes: [1515, 1516]
+  temporarilyUnavailable: 503
+  temporarilyUnavailableProviderCode: 1510
+
+limits:
+  - name: Records per request (standard key)
+    scope: request
+    metric: records_per_request
+    limit: 25
+    default: 10
+    timeFrame: request
+    parameter: _limit
+  - name: Records per request (replication role)
+    scope: request
+    metric: records_per_request
+    limit: 1000
+    timeFrame: request
+    parameter: _limit
+    note: Available only to keys carrying the replication role, on replication.sparkapi.com.
+  - name: Maximum page number
+    scope: request
+    metric: page_number
+    limit: 100000
+    timeFrame: request
+    parameter: _page
+  - name: Maximum skip offset
+    scope: request
+    metric: record_offset
+    limit: 2500000
+    timeFrame: request
+    parameter: _skip
+
+requests_per_second: null
+requests_per_day: null
+overage_policy: null
+raise_limit_process: >-
+  Not published. Elevated access and privileged resources are arranged by contacting
+  api-support@sparkplatform.com.
+
+notes:
+  - >-
+    Deep paging beyond the _skip ceiling is meant to be handled with the _skiptoken continuation
+    parameter, which pages without missing data.
+  - >-
+    Read-heavy and bulk traffic must be sent to replication.sparkapi.com; a key restricted to
+    that host receives error code 1021 when it calls sparkapi.com.
+  - >-
+    Pricing is per-MLS (USD 50/month per MLS) rather than per-call, so there is no metered
+    request quota to publish — see finops/commercial terms on https://www.sparkapi.io/developers/.

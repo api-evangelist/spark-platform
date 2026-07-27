@@ -25,7 +25,7 @@ description: >-
   data plan purchased through the Spark Datamart under an IDX, VOW or Private role, and a
   per-MLS fee. Certification here is real and verifiable; reachability is licensed. Home
   market is the United States.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/groq.png
+image: https://www.sparkapi.io/wp-content/uploads/2023/07/cropped-Spark_Pin_Favicon-192x192.png
 tags:
 - Real Estate
 - United States
@@ -72,6 +72,12 @@ apis:
     url: https://sparkplatform.com/docs/supporting_documentation/search_and_paging_syntax
   - type: Authentication
     url: https://sparkplatform.com/docs/authentication/access_token
+  - type: ErrorCatalog
+    url: errors/spark-platform-error-codes.yml
+  - type: Conventions
+    url: conventions/spark-platform-conventions.yml
+  - type: Examples
+    url: examples/spark-platform-request-examples.yml
   - type: SignUp
     url: https://sparkplatform.com/register/developers
   - type: TermsOfService
@@ -107,6 +113,12 @@ apis:
     url: https://sparkplatform.com/docs/supporting_documentation/reso_dictionary
   - type: Authentication
     url: https://sparkplatform.com/docs/authentication/access_token
+  - type: DataModel
+    url: data-model/spark-platform-data-model.yml
+  - type: Conformance
+    url: conformance/spark-platform-conformance.yml
+  - type: Examples
+    url: examples/spark-platform-request-examples.yml
 - aid: spark-platform:spark-webhooks
   name: Spark Webhooks
   description: >-
@@ -118,6 +130,7 @@ apis:
     holds a RESO webhooks 1.0.0 certification endorsement for this surface. Subscriptions
     are arranged with FBS rather than self-provisioned.
   humanURL: https://sparkplatform.com/docs/webhooks/webhooks
+  baseURL: https://replication.sparkapi.com/v1
   tags:
   - Webhooks
   - RESO
@@ -126,21 +139,75 @@ apis:
   properties:
   - type: Documentation
     url: https://sparkplatform.com/docs/webhooks/webhooks
+  - type: Webhooks
+    url: asyncapi/spark-platform-webhooks.yml
 common:
+- type: DomainSecurity
+  url: security/spark-platform-domain-security.yml
 - type: Website
   url: https://www.sparkapi.io/
+- type: DeveloperPortal
+  url: https://sparkplatform.com/docs
 - type: Documentation
   url: https://sparkplatform.com/docs
+- type: APIReference
+  url: https://sparkplatform.com/docs/api_services/read_first
+- type: GettingStarted
+  url: https://sparkplatform.com/docs/overview/set_up_access
+- type: Support
+  url: https://www.sparkapi.io/contact/
+- type: Blog
+  url: https://www.sparkapi.io/blog/
+- type: BlogRSS
+  url: https://www.sparkapi.io/feed/
 - type: SignUp
   url: https://sparkplatform.com/register/developers
+- type: Login
+  url: https://sparkplatform.com/ticket
 - type: GitHubOrganization
   url: https://github.com/sparkapi
 - type: Authentication
   url: https://sparkplatform.com/docs/authentication/authentication
+- type: Authentication
+  url: authentication/spark-platform-authentication.yml
+- type: OAuthScopes
+  url: scopes/spark-platform-scopes.yml
 - type: OpenIDConnectDiscovery
   url: authentication/spark-platform-openid-configuration.json
 - type: JSONWebKeySet
   url: authentication/spark-platform-openid-jwks.json
+- type: WellKnown
+  url: well-known/spark-platform-well-known.yml
+- type: Packages
+  url: packages/spark-platform-packages.yml
+- type: SDKs
+  url: packages/spark-platform-packages.yml
+- type: Postman
+  url: https://documenter.getpostman.com/view/25548936/2s935snM26
+- type: PostmanCollection
+  url: postman/spark-platform-spark-web-api-queries.postman_collection.json
+- type: Examples
+  url: examples/spark-platform-request-examples.yml
+- type: Conventions
+  url: conventions/spark-platform-conventions.yml
+- type: ErrorCatalog
+  url: errors/spark-platform-error-codes.yml
+- type: RateLimits
+  url: rate-limits/spark-platform-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/spark-platform-lifecycle.yml
+- type: DataModel
+  url: data-model/spark-platform-data-model.yml
+- type: Components
+  url: components/spark-platform-components.yml
+- type: Webhooks
+  url: asyncapi/spark-platform-webhooks.yml
+- type: Conformance
+  url: conformance/spark-platform-conformance.yml
+- type: Compliance
+  url: https://services.reso.org/orgs?showStats=true&showEndorsements=true
+- type: LLMsTxt
+  url: llms/spark-platform-llms.txt
 - type: TermsOfService
   url: https://sparkplatform.com/docs/terms_of_use/developer_agreement_and_terms_of_use
 - type: PrivacyPolicy

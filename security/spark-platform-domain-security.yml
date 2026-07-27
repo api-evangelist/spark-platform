@@ -1,0 +1,45 @@
+generated: '2026-07-26'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.sparkapi.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 13 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 300
+- host: sparkplatform.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 13 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 300
+- host: sparkapi.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 13 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 300
+- host: replication.sparkapi.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 13 23:59:59 2026 GMT
+  cert_issuer: ZeroSSL RSA DV SSL CA 2
+  hsts: false
+  note: >-
+    Added by hand on 2026-07-26 — the RESO Web API / replication host from apis.yml baseURL,
+    which the automated pass did not resolve to a bare hostname. No
+    Strict-Transport-Security header was returned on either the 301 at / or the 401 at
+    /Version/3/Reso/OData/Property.
+domains:
+- domain: sparkapi.io
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
+- domain: sparkplatform.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

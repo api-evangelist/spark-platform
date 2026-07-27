@@ -1,0 +1,89 @@
+generated: '2026-07-26'
+method: searched
+source: https://sparkplatform.com/docs/supporting_documentation/error_codes
+description: >-
+  The Spark(R) API error-code registry, captured verbatim from the vendor's published Error
+  Codes page (HTTP 200, fetched 2026-07-26). Spark does not use RFC 9457 problem+json; every
+  response — success or failure — is wrapped in the "D" envelope documented at
+  /docs/supporting_documentation/standard_response_format, and a failure carries a numeric
+  Spark error Code alongside the HTTP status. The codes are grouped in bands: 4xx/5xx HTTP
+  passthroughs, 1000-1599 platform/authorization/validation errors, 2000-2999 value-specific
+  _filter (SparkQL) errors, and 3000+ RESO Data Dictionary errors. The vendor's own guidance
+  is that clients should branch on Code rather than parse Message.
+format: proprietary-envelope
+envelope:
+  wrapper: D
+  fields:
+    Success: boolean — false on failure
+    Code: integer — the Spark API error code below
+    Message: string — human-readable description (may vary per occurrence)
+    Errors: >-
+      optional array elaborating on a failure or warning; entries carry Type
+      (InvalidRecord / InvalidAttribute / RuleViolation), Attribute, Message, Status
+      (Fatal / Warn) and, for listing rule violations, a Display block and a Rule block
+      pointing at /v1/listings/rules/{id}
+    SparkQLErrors: array present on _filter syntax and value errors (codes 1040, 1041, 2000-2999)
+  example_failure: '{"D":{"Success":false,"Code":1000,"Message":"Invalid API key and/or request signed improperly"}}'
+  docs: https://sparkplatform.com/docs/supporting_documentation/standard_response_format
+
+error_codes:
+  - {code: 404, http_status: 404, message: Not found}
+  - {code: 405, http_status: 405, message: Method not allowed}
+  - {code: 1000, http_status: 401, message: Invalid API key and/or request signed improperly}
+  - {code: 1005, http_status: 403, message: Your API key has not been properly set up. Please contact API support.}
+  - {code: 1010, http_status: 401, message: API key is disabled}
+  - {code: 1013, http_status: 403, message: The auth mechanism used for this request is not permitted for the provided key}
+  - {code: 1015, http_status: 403, message: The user associated with this API key either cannot be identified, is set as inactive, or has their Flexmls system access turned off.}
+  - {code: 1017, http_status: 405, message: "You are restricted to read-only access. POST, PUT, and DELETE requests are forbidden."}
+  - {code: 1018, http_status: 405, message: You are forbidden from accessing this resource with the method attempted}
+  - {code: 1019, http_status: 403, message: This key is restricted to specific IP addresses and/or User-Agent values}
+  - {code: 1020, http_status: 401, message: Session token has expired}
+  - {code: 1021, http_status: 403, message: "This key is restricted from accessing this endpoint. Please use replication.sparkapi.com"}
+  - {code: 1022, http_status: 422, message: Unable to process this request due to invalid authenticity token.}
+  - {code: 1023, http_status: 503, message: The user's account is not yet available in Spark.}
+  - {code: 1024, http_status: 503, message: The requested data is not yet in sync with its source system.}
+  - {code: 1026, http_status: 500, message: An unexpected problem was encountered with the requested data.}
+  - {code: 1030, http_status: 403, message: SSL required for this type of request}
+  - {code: 1035, http_status: 400, message: "POST data not supplied as valid JSON. Issued if the Content-Type header is not application/json and/or if the POST data is not in valid JSON format"}
+  - {code: 1040, http_status: 400, message: The _filter syntax was invalid or a specified field to search on does not exist. Response will include the SparkQLErrors attribute.}
+  - {code: 1041, http_status: 400, message: (Message varies) The _filter syntax is valid but exceeds restrictions on filter or argument length. Response will include the SparkQLErrors attribute.}
+  - {code: 1050, http_status: 400, message: (Message varies) A required parameter for the request was not provided}
+  - {code: 1053, http_status: 400, message: (Message varies) A parameter was provided but does not adhere to constraints}
+  - {code: 1055, http_status: 409, message: (Message varies) Issued when a write is requested that will conflict with existing data. For instance, adding a new contact with an e-mail that already exists}
+  - {code: 1060, http_status: 400, message: (Message varies) A Validation field did not match existing data}
+  - {code: 1061, http_status: 400, message: (Message varies) Attempt to reuse previous data when prohibited}
+  - {code: 1100, http_status: 403, message: This resource cannot be accessed until a Portal account is created for the specified contact}
+  - {code: 1110, http_status: 409, message: A portal already exists for this contact}
+  - {code: 1500, http_status: 403, message: "The resource is not available at the current API key's service level. For example, this error applies if a user attempts to access the IDX Links API via a non-IDX API key."}
+  - {code: 1505, http_status: 403, message: (Message varies) This resource, or a component of this resource, is disabled for the current user's MLS. This is usually temporary, such as during a gradual rollout of a feature.}
+  - {code: 1510, http_status: 503, message: The API is temporarily unavailable.}
+  - {code: 1515, http_status: 503, message: Your request took too long to process and has therefore been cancelled.}
+  - {code: 1516, http_status: 503, message: Your request took too long to process and was cancelled due to the _filter or _orderby parameter you provided.}
+  - {code: 1550, http_status: 429, message: Over rate limit}
+  - {code: 2000, http_status: 400, message: "Codes 2000-2999 are reserved for value-specific errors in the _filter parameter. These are not syntax errors, but instead errors specific to the valid field present in the parameter. Responses will include the SparkQLErrors attribute."}
+  - {code: 2001, http_status: 400, message: The SavedSearch specified does not exist or is not available to the current user.}
+  - {code: 2002, http_status: 400, message: The EmailLink specified does not exist or is not available to the current user.}
+  - {code: 2003, http_status: 400, message: The SharedListings id specified does not exist or does not contain listings.}
+  - {code: 2005, http_status: 503, message: The provided _filter references data that has not yet been migrated to Spark.}
+  - {code: 2500, http_status: 400, message: The search you are attempting to subscribe to does not meet the search criteria restrictions.}
+  - {code: 2505, http_status: 409, message: The current user is already subscribed to this saved search.}
+  - {code: 3000, http_status: 400, message: The RESO data dictionary version you requested is not supported.}
+
+bands:
+  - {range: 400-499, meaning: HTTP status passthrough for not-found and method-not-allowed}
+  - {range: 1000-1035, meaning: Authentication, authorization, key configuration and transport errors}
+  - {range: 1040-1061, meaning: Request validation — SparkQL _filter syntax, parameters, conflicts}
+  - {range: 1100-1110, meaning: Portal / VOW consumer account errors}
+  - {range: 1500-1516, meaning: Service level, feature availability, timeouts and platform availability}
+  - {range: 1550, meaning: Rate limiting}
+  - {range: 2000-2999, meaning: Value-specific SparkQL _filter errors}
+  - {range: 3000+, meaning: RESO Data Dictionary version errors}
+
+notes:
+  - >-
+    Code 1021 is operationally important: read-heavy and replication traffic must be sent to
+    replication.sparkapi.com rather than sparkapi.com, and the API tells you so by code.
+  - >-
+    The RESO Web API (OData) surface returns a different envelope —
+    {"error":{"code":401,"message":"Invalid API key and/or request signed improperly"}} —
+    following the OData error shape rather than the Spark "D" envelope.

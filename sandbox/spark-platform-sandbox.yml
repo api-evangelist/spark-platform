@@ -1,0 +1,77 @@
+generated: '2026-07-26'
+method: searched
+source: >-
+  https://sparkplatform.com/docs/overview/set_up_access, https://sparkplatform.com/register/developers,
+  https://alpha.sparkplatform.com/docs, https://github.com/sparkapi/feed-faker,
+  https://packagist.org/packages/sparkapi/feed-faker (all fetched 2026-07-26).
+description: >-
+  Spark Platform's test surface, stated honestly: there is no anonymous sandbox. No test host,
+  no publishable test key prefix, no magic listing keys and no fixture endpoint are published.
+  What exists is (1) demo API credentials issued after a free developer registration is
+  approved — up to three business days, credentialed but not self-serve; (2) an alpha
+  documentation host; and (3) a first-party open-source RESO feed faker that lets a developer
+  build and test against RESO-shaped synthetic data locally while the real feed is licence-
+  gated. Every published endpoint answers HTTP 401 without an MLS-approved key, including the
+  OData $metadata document.
+
+rating_note: >-
+  No `type: Sandbox` pointer is emitted in apis.yml for this provider. The artifact records the
+  absence of a sandbox/console as a finding; wiring the canonical pointer would claim a
+  developer-experience surface that does not exist.
+
+anonymous_sandbox:
+  exists: false
+  evidence:
+    - {url: 'https://sparkapi.com/v1/listings', status: 401, body: '{"D":{"Message":"Invalid API key and/or request signed improperly","Code":1000,"Success":false}}'}
+    - {url: 'https://replication.sparkapi.com/Version/3/Reso/OData/$metadata', status: 401, body: '{"error":{"code":401,"message":"Invalid API key and/or request signed improperly"}}'}
+
+demo_credentials:
+  exists: true
+  how: >-
+    Register at https://sparkplatform.com/register/developers (free, public, no login). FBS
+    reviews and activates the account within three business days and issues demo API
+    credentials on approval.
+  yields: Demo credentials only — no production MLS content.
+  next_gate: >-
+    Real data requires a signed FBS Developer Agreement, a role (IDX / VOW / Private) and an
+    MLS-approved data plan purchased through the Spark Datamart
+    (https://sparkplatform.com/appstore/datamart) at USD 50/month per MLS.
+  docs: https://sparkplatform.com/docs/overview/set_up_access
+
+test_values:
+  published: false
+  note: >-
+    No magic listing keys, member ids, MLS ids or test tokens are published. The vendor's
+    Postman collection uses placeholders (<Insert_ListingKey>, <Insert_MlsId>, <Contact.Id>)
+    that the developer must fill from their own licensed feed. Nothing here is invented.
+
+alpha_environment:
+  url: https://alpha.sparkplatform.com/docs
+  status: 200
+  note: >-
+    An alpha documentation host that mirrors the production docs. It is a documentation
+    environment, not an unauthenticated API sandbox, and publishes no change history.
+
+local_fixture_tooling:
+  - name: feed-faker
+    url: https://github.com/sparkapi/feed-faker
+    package: https://packagist.org/packages/sparkapi/feed-faker
+    language: php
+    official: true
+    description: >-
+      "RESO-compliant data feed faker" — a first-party generator of fake RESO standard-field
+      data. The practical substitute for a sandbox: it lets an integrator exercise RESO-shaped
+      payloads before an MLS data plan is approved.
+  - name: faker-wrapper
+    url: https://github.com/sparkapi/faker-wrapper
+    language: php
+    official: true
+    description: Lumen PHP web application Docker image that serves the RESO Feed Faker over HTTP.
+
+collections:
+  postman: postman/spark-platform-spark-web-api-queries.postman_collection.json
+  postman_public: https://documenter.getpostman.com/view/25548936/2s935snM26
+  note: >-
+    The vendor's public "Spark Web API Queries" collection is the closest thing to a runnable
+    starter kit — real request URLs for both the Spark API and the RESO Web API, ready to fire
+    once a licensed token exists.

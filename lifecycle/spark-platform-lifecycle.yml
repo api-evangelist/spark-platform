@@ -1,0 +1,98 @@
+generated: '2026-07-26'
+method: searched
+source: >-
+  https://sparkplatform.com/docs/overview/api_vs_rets, https://sparkplatform.com/docs/overview/faq,
+  https://sparkplatform.com/docs/reso/overview,
+  https://sparkplatform.com/docs/supporting_documentation/reso_dictionary,
+  https://sparkplatform.com/docs/api_services/read_first (all HTTP 200, fetched 2026-07-26);
+  status-page and changelog absence confirmed by probe.
+description: >-
+  Versioning and lifecycle posture for the Spark Platform interfaces. Spark versions by URI
+  path on both surfaces (/v1 for the Spark API, /Version/3/ for the RESO Web API) and layers a
+  second, negotiated version axis on top — the RESO Data Dictionary version, of which several
+  are supported concurrently. The platform-level lifecycle story is the RETS-to-Web-API
+  migration: FBS documents RETS alongside the APIs and states plainly that the Web API replaces
+  it, citing RESO's decision to stop updating the RETS specification. There is no published
+  changelog, no status page, no numeric SLA and no RFC 8594 Sunset/Deprecation header support.
+
+versioning:
+  scheme: uri-path
+  spark_api:
+    current: v1
+    base: https://sparkapi.com/v1
+    docs: https://sparkplatform.com/docs/api_services/read_first
+  reso_web_api:
+    current: Version/3
+    base: https://replication.sparkapi.com/Version/3/Reso/OData/
+    prior_versions_documented: [/Reso/OData/, /Version/2/Reso/OData/]
+    docs: https://sparkplatform.com/docs/reso/overview
+  data_dictionary:
+    scheme: negotiated
+    note: >-
+      "Spark(R) API supports multiple RESO Data Dictionary versions" and "all currently
+      supported versions are advertised in the System Info service". The documentation names
+      0.8 as the default and shows 1.3 in an example; the live supported set can only be read
+      through the key-gated System Info service. Requesting an unsupported version returns
+      error code 3000.
+    certified_versions: ['1.7', '2.0']
+    docs: https://sparkplatform.com/docs/supporting_documentation/reso_dictionary
+
+deprecation:
+  policy_url: https://sparkplatform.com/docs/overview/api_vs_rets
+  sunset_header: false
+  deprecation_header: false
+  summary: >-
+    RETS is the deprecated interface. The vendor FAQ answers "Will the Platform replace RETS?"
+    with "Yes! RESO is no longer updating RETS specs, shifting efforts entirely to the RESO Web
+    API." RETS remains fully documented (overview, DMQL examples, photo/replication examples,
+    troubleshooting, a RETS Listing Activity API and MLS tooling) with no announced end-of-life
+    date, so the migration is directional rather than dated.
+  deprecated_interfaces:
+    - name: RETS
+      status: superseded, still documented and operating
+      docs: https://sparkplatform.com/docs/rets/overview
+      replacement: Spark API and RESO Web API
+      sunset_date: null
+  note: >-
+    No per-operation deprecation flags are available — Spark publishes no OpenAPI, so nothing
+    can be derived. No general API-versioning deprecation policy (notice window, support
+    horizon) was found in the documentation.
+
+status_page:
+  url: null
+  note: >-
+    No status page exists. status.sparkplatform.com and status.sparkapi.com do not resolve;
+    sparkplatform.statuspage.io and flexmls.statuspage.io fall through to Atlassian's generic
+    marketing page; www.sparkapi.io/status/ returns 404. Availability is signalled only in
+    band, through error codes 1510 ("The API is temporarily unavailable") and 1023/1024
+    (account or data not yet in sync).
+
+changelog:
+  url: null
+  note: >-
+    No dated changelog or release-notes surface was found on the documentation host. The
+    marketing blog at https://www.sparkapi.io/blog/ is the only dated stream and its RSS feed's
+    most recent post is from June 2019. An alpha documentation host exists
+    (https://alpha.sparkplatform.com/docs, HTTP 200) but publishes no change history.
+
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No published uptime commitment. Service terms live in the Developer Agreement and the MLS
+    Platform License Agreement, both under /docs/terms_of_use/.
+
+support:
+  email: api-support@sparkplatform.com
+  contact_page: https://www.sparkapi.io/contact/
+  rets_support: https://sparkplatform.com/docs/rets/contact_rets_support
+
+certification_lifecycle:
+  body: RESO
+  organization_uoi: T00000052
+  status: Certified Current
+  feed: https://services.reso.org/orgs?showStats=true&showEndorsements=true
+  note: >-
+    Certification status is re-verifiable at any time from RESO's machine-readable organizations
+    feed — the closest thing Spark has to an external lifecycle signal. Detail in
+    conformance/spark-platform-conformance.yml.

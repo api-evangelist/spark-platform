@@ -1,0 +1,102 @@
+generated: '2026-07-26'
+method: derived
+source: >-
+  Derived from the resource paths in the vendor's public Postman collection
+  (postman/spark-platform-spark-web-api-queries.postman_collection.json, 64 requests), the API
+  Services and RESO Web API sections of https://sparkplatform.com/docs, and the RESO Data
+  Dictionary resource set documented at https://sparkplatform.com/docs/reso/overview. No
+  OpenAPI or OData $metadata document could be retrieved ($metadata returns HTTP 401), so field
+  lists and cardinalities below the path level are deliberately absent rather than guessed.
+docs: https://sparkplatform.com/docs/reso/overview
+notation: >-
+  relationships use has_one / has_many / belongs_to with the URI segment or RESO navigation
+  property that expresses the link; direction is from the entity that owns the reference. Only
+  relationships evidenced by a published sub-resource path or a documented RESO navigation
+  property are recorded.
+
+surfaces:
+  spark_api:
+    base: https://sparkapi.com/v1
+    replication_base: https://replication.sparkapi.com/v1
+    key: Spark-proprietary resources, SparkQL filtering, Flexmls-native concepts
+  reso_web_api:
+    base: https://replication.sparkapi.com/Version/3/Reso/OData/
+    key: RESO Data Dictionary resources addressed as OData entity sets
+    metadata: https://replication.sparkapi.com/Version/3/Reso/OData/$metadata (HTTP 401 anonymously)
+
+reso_entities:
+  - {name: Property, key_field: ListingKey, description: The listing record — the spine of the RESO model.}
+  - {name: Member, description: An MLS member (agent).}
+  - {name: Office, description: A brokerage office.}
+  - {name: Media, key_field: MediaKey, description: Photos, videos, virtual tours and documents attached to a resource record.}
+  - {name: OpenHouse, description: Scheduled open house events for a property.}
+  - {name: Room, description: Room-level detail for a property.}
+  - {name: Unit, description: Unit-level detail for multi-unit properties.}
+  - {name: GreenVerification, description: Green/energy verification records for a property.}
+  - {name: PowerProduction, description: On-site power production records for a property.}
+  - {name: Lookup, description: Enumerated field values (the lookup dictionary) for the feed.}
+  - {name: Teams, description: Team resource documented in the RESO Web API section.}
+
+reso_relationships:
+  - {from: Property, to: Media, type: has_many, via: "Property('<ListingKey>')/Media", evidence: postman}
+  - {from: Property, to: Room, type: has_many, via: "Property('<ListingKey>')/Room", evidence: postman}
+  - {from: Property, to: Unit, type: has_many, via: "Property('<ListingKey>')/Unit", evidence: postman}
+  - {from: Property, to: GreenVerification, type: has_many, via: "Property('<ListingKey>')/GreenVerification", evidence: postman}
+  - {from: Property, to: PowerProduction, type: has_many, via: "Property('<ListingKey>')/PowerProduction", evidence: postman}
+  - {from: Property, to: OpenHouse, type: has_many, via: OpenHouse entity set filtered by listing, evidence: docs}
+  - {from: Member, to: Office, type: belongs_to, via: OfficeKey / OfficeMlsId, evidence: "OIDC claims + RESO Data Dictionary"}
+  - {from: Property, to: Member, type: belongs_to, via: ListAgent / member keys, evidence: RESO Data Dictionary}
+  - {from: Media, to: Property, type: belongs_to, via: ResourceRecordKey, evidence: "postman ($select=ResourceRecordKey,Order,MediaURL,PreferredPhotoYN)"}
+
+spark_entities:
+  - {name: Listing, path: /v1/listings, key_field: ListingKey, description: The Spark-native listing resource.}
+  - {name: IncompleteListing, path: /v1/listings/incomplete, description: Draft listings not yet published to the MLS.}
+  - {name: Account, path: /v1/accounts, description: The authenticated user / member account; /v1/my/account for self.}
+  - {name: Contact, path: /v1/contacts, description: A consumer contact owned by an agent.}
+  - {name: PortalAccount, path: "/v1/contacts/<Contact.Id>/portal", description: A VOW/portal consumer login attached to a contact.}
+  - {name: SavedSearch, path: /v1/savedsearches, description: A stored SparkQL search, subscribable by contacts.}
+  - {name: ListingCart, path: "/v1/contacts/<Contact.Id>/listingcarts", description: A collection of listings saved for a contact.}
+  - {name: Overlay, path: /v1/listings/overlays, description: Map overlay geometries used in geo searches.}
+  - {name: MarketStatistic, path: /v1/marketstatistics, description: "Aggregated market metrics: absorption, inventory, price, ratio, dom, volume."}
+  - {name: StandardField, path: /v1/standardfields, description: Field metadata for the MLS — the Spark equivalent of $metadata.}
+  - {name: CustomField, path: /v1/customfields, description: MLS-specific custom fields and their groups.}
+  - {name: SystemInfo, path: /v1/system, description: System-level metadata including supported RESO Data Dictionary versions.}
+  - {name: Developer, path: /v1/developers, description: "Key, role, domain, authorization, usage and newsfeed-webhook administration."}
+
+spark_relationships:
+  - {from: Listing, to: Photo, type: has_many, via: "/v1/listings/{ListingKey}/photos", evidence: postman}
+  - {from: Listing, to: Video, type: has_many, via: "/v1/listings/{ListingKey}/videos", evidence: postman}
+  - {from: Listing, to: VirtualTour, type: has_many, via: "/v1/listings/{ListingKey}/virtualtours", evidence: postman}
+  - {from: Listing, to: Document, type: has_many, via: "/v1/listings/{ListingKey}/documents", evidence: postman}
+  - {from: Listing, to: FloPlan, type: has_many, via: "/v1/listings/{ListingKey}/floplans", evidence: postman}
+  - {from: Listing, to: ListingHistory, type: has_many, via: "/v1/listings/{ListingKey}/history", evidence: postman}
+  - {from: Listing, to: ListingRule, type: has_many, via: "/v1/listings/rules/{id}", evidence: "standard response format — RuleViolation entries carry a Rule.ResourceUri"}
+  - {from: Listing, to: OpenHouse, type: has_many, via: /v1/openhouses, evidence: docs}
+  - {from: Account, to: Association, type: has_many, via: "/v1/accounts/{Account.Id}/associations", evidence: postman}
+  - {from: Account, to: Profile, type: has_one, via: "/v1/accounts/{Account.Id}/profile", evidence: postman}
+  - {from: Contact, to: Activity, type: has_many, via: "/v1/contacts/{Contact.Id}/activity", evidence: postman}
+  - {from: Contact, to: Tag, type: has_many, via: /v1/contacts/tags, evidence: postman}
+  - {from: Contact, to: PortalAccount, type: has_one, via: "/v1/contacts/{Contact.Id}/portal", evidence: postman}
+  - {from: Contact, to: ListingCart, type: has_many, via: "/v1/contacts/{Contact.Id}/listingcarts", evidence: postman}
+  - {from: SavedSearch, to: Contact, type: has_many, via: ContactIds / UnsubscribedContactIds, evidence: "standard response format example payload"}
+  - {from: SavedSearch, to: Overlay, type: belongs_to, via: "MapOverlay in the Filter expression", evidence: "standard response format example payload"}
+  - {from: Overlay, to: Geometry, type: has_many, via: /v1/listings/overlays/shapes, evidence: postman}
+  - {from: MLS, to: StandardField, type: has_many, via: "/v1/mls/{MlsId}/standardfields", evidence: postman}
+  - {from: CustomField, to: CustomFieldGroup, type: belongs_to, via: /v1/customfields/groups, evidence: postman}
+
+cross_surface_note: >-
+  The two surfaces are projections of the same Flexmls core, not a superset and a subset. The
+  Spark API exposes Flexmls-native concepts the RESO model has no home for (contacts, saved
+  searches, listing carts, portals, market statistics, overlays, developer administration);
+  the RESO Web API exposes the standardized Data Dictionary shape that a multi-vendor consumer
+  can reuse across MLS vendors. Media is the clearest divergence: Spark splits it into photos,
+  videos, virtual tours, documents and floor plans; RESO folds all of it into one Media
+  resource keyed by ResourceRecordKey.
+
+identity_keys:
+  - {name: ListingKey, note: Primary listing identifier used in both surfaces.}
+  - {name: MlsId, note: Identifies the source MLS; the unit of licensing, pricing and data-plan approval.}
+  - {name: MemberMlsId / MemberNrdsId, note: Member identity, also carried as OIDC claims.}
+  - {name: OfficeKey / OfficeMlsId, note: Office identity, also carried as OIDC claims.}
+  - {name: MediaKey, note: Media record identifier on the RESO surface.}
+  - {name: UPI, note: "RESO Universal Property Identifier — no reference found in the documentation."}

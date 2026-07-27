@@ -1,0 +1,159 @@
+generated: '2026-07-26'
+method: searched
+source: >-
+  https://sparkplatform.com/docs/supporting_documentation/search_and_paging_syntax,
+  /docs/supporting_documentation/standard_response_format,
+  /docs/supporting_documentation/expansions, /docs/supporting_documentation/roles,
+  /docs/supporting_documentation/error_codes, /docs/authentication/access_token,
+  /docs/api_services/read_first (all HTTP 200, fetched 2026-07-26).
+description: >-
+  How the Spark(R) API behaves across every operation: authentication style, the "D" response
+  envelope, SparkQL filtering, pagination, sorting, expansions, role-scoped data access,
+  replication routing, error signalling and rate limiting. These are the cross-cutting
+  runtime semantics no OpenAPI exists to express — Spark publishes no machine-readable spec,
+  so this artifact plus errors/ is the closest thing to a contract an integrator can read
+  before signing a Developer Agreement.
+
+base_urls:
+  spark_api: https://sparkapi.com/v1
+  replication: https://replication.sparkapi.com/v1
+  reso_web_api: https://replication.sparkapi.com/Version/3/Reso/OData/
+api_style: REST over HTTPS, JSON request and response bodies; RESO surface is OData v4.
+
+authentication:
+  scheme: >-
+    Bearer access token in the Authorization header ("Authorization: Bearer <access_token>").
+    Tokens come from OAuth 2 or from an MLS-issued non-expiring token. OpenID Connect and SAML
+    are also supported for member-identity flows.
+  required_headers: [Authorization, Accept]
+  transport: HTTPS required (error code 1030 when not).
+  anonymous_behaviour: HTTP 401, Spark code 1000 "Invalid API key and/or request signed improperly".
+  docs: https://sparkplatform.com/docs/authentication/access_token
+  detail: authentication/spark-platform-authentication.yml
+
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header, request-replay contract or de-duplication guarantee is
+    documented anywhere in the Spark documentation. Write conflicts surface after the fact as
+    error code 1055 (HTTP 409) rather than being prevented by a client-supplied key. Recorded
+    as absent — no Idempotency pointer is emitted for this provider.
+
+pagination:
+  style: page-number, offset and continuation-token variants on the same endpoints
+  request_params:
+    _limit: Integer >= 0 and <= 25, default 10. Keys with the replication role may use >= 0 and <= 1000.
+    _pagination: 0 = omit the Pagination hash (default); 1 = include it; count = return only the count with an empty Results array.
+    _page: Page number, 1-based, cannot exceed 100000.
+    _skip: Start after this index; 0 to 2500000. Substitutes CurrentOffset for CurrentPage in the Pagination hash.
+    _skiptoken: Continuation token for paging without missing data; send empty first, then echo the SkipToken from the response.
+  response_fields:
+    Pagination.TotalRows: total number of rows in the response
+    Pagination.PageSize: rows returned in a single page
+    Pagination.TotalPages: total pages in the response
+    Pagination.CurrentPage: page number of the current response
+    Pagination.CurrentOffset: offset of the current response (only when _skip is used)
+  docs: https://sparkplatform.com/docs/supporting_documentation/search_and_paging_syntax
+
+sorting:
+  param: _orderby
+  syntax: "Prefix a field with + (ascending) or - (descending); comma-separate for multi-key sorts."
+  examples: ["_orderby=-ListPrice", "_orderby=-ListPrice,+BathsTotal"]
+  note: Any searchable field may be used, excluding long text fields such as PublicRemarks.
+
+filtering:
+  param: _filter
+  language: SparkQL
+  grammar_docs: https://sparkplatform.com/docs/supporting_documentation/sparkql_grammar
+  syntax: "<field> <operator> <condition> [<connector> <field> <operator> <condition>]"
+  connectors: [And, Or, Not]
+  operators: [Eq, Ne, Bt, Gt, Ge, Lt, Le]
+  examples:
+    - "PropertyType Eq 'A' And BathsTotal Eq 3.0"
+    - "MlsStatus Eq 'Active' And ListPrice Ge 10000.00"
+  custom_fields: 'Custom field names are quoted and group-qualified, e.g. "Contract Information"."Area"'
+  errors: >-
+    Syntax errors return code 1040 and value errors return codes in the 2000-2999 band, both
+    with a SparkQLErrors attribute in the response.
+  parser: The grammar is implemented open-source as the sparkql Ruby gem (see packages/).
+
+field_expansion:
+  supported: true
+  param: _expand
+  description: >-
+    Returns additional data components that are omitted by default for performance. Available
+    expansions are documented per resource; some are role-restricted and some are only allowed
+    when a single record is retrieved (by id, or _limit=1). Comma-separate multiple values.
+  examples: ["_expand=Settings", "_expand=Photos,VirtualTours"]
+  docs: https://sparkplatform.com/docs/supporting_documentation/expansions
+
+attribute_selection:
+  supported: true
+  param: _select
+  note: >-
+    An Attribute Selection page is listed in the Supporting Documentation navigation; the
+    parameter itself is evidenced in the vendor's public Postman collection, which uses
+    _select=ListingId, _select=UnparsedAddress and similar to narrow returned attributes. The
+    RESO/OData surface uses the OData $select and $expand equivalents.
+  evidence: postman/spark-platform-spark-web-api-queries.postman_collection.json
+
+response_envelope:
+  wrapper: D
+  success: '{"D":{"Success":true}}'
+  success_with_creation: '{"D":{"Success":true,"Results":[{"ResourceUri":"/servicename/XXXXX"}]}}'
+  accepted: HTTP 202 means the create/update was scheduled for future processing.
+  versioned_success: '{"D":{"Success":true,"Version":1}} — some resources expose a versions subresource that can restore prior state, including after deletion.'
+  failure: '{"D":{"Success":false,"Code":1234,"Message":"..."}}'
+  warnings: >-
+    Some services return an Errors array on an otherwise successful response (Status: Warn),
+    carrying InvalidRecord / InvalidAttribute / RuleViolation entries.
+  detail: errors/spark-platform-error-codes.yml
+  docs: https://sparkplatform.com/docs/supporting_documentation/standard_response_format
+
+versioning:
+  scheme: uri-path
+  spark_api: /v1
+  reso_web_api: /Version/3/Reso/OData/ (version 2 paths remain documented)
+  data_dictionary: >-
+    Multiple RESO Data Dictionary versions are supported simultaneously and negotiated per
+    request; the supported set is advertised through the key-gated System Info service.
+    Requesting an unsupported version returns code 3000.
+  detail: lifecycle/spark-platform-lifecycle.yml
+
+roles:
+  description: >-
+    Data returned is scoped by the role assigned to the API key, not only by authentication.
+    This is the defining convention of MLS data access — the same operation returns different
+    fields to different roles.
+  values: [IDX, VOW, Private, Broker/Agent own data, Public, Portal]
+  docs: https://sparkplatform.com/docs/supporting_documentation/roles
+  errors: Code 1500 when a resource is above the key's service level.
+
+replication:
+  description: >-
+    Bulk/read-heavy traffic must be sent to replication.sparkapi.com. Keys restricted to that
+    host receive code 1021 when they call sparkapi.com. The replication role also raises the
+    _limit ceiling from 25 to 1000.
+  docs: https://sparkplatform.com/docs/supporting_documentation/spark_replication
+
+rate_limiting:
+  documented: partial
+  signal: HTTP 429 with Spark code 1550 "Over rate limit"
+  headers: No rate-limit headers (RateLimit-*, X-RateLimit-*) are documented.
+  soft_limits:
+    - _limit ceiling of 25 records per request (1000 for replication-role keys)
+    - _page ceiling of 100000
+    - _skip ceiling of 2500000
+    - Long-running requests are cancelled with codes 1515 / 1516
+
+request_tracing:
+  request_id_header: none documented
+  note: No correlation/request-id header is published for support escalation.
+
+content_type:
+  request: application/json required on POST/PUT (code 1035 otherwise)
+  response: application/json
+
+support:
+  email: api-support@sparkplatform.com
+  note: Privileged resources and elevated key permissions are arranged through API support.

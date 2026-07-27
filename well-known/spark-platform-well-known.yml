@@ -1,0 +1,82 @@
+generated: '2026-07-26'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface on every host in apis.yml — the
+  documentation/identity host (sparkplatform.com), the Spark API host (sparkapi.com), the
+  replication / RESO Web API host (replication.sparkapi.com) and the marketing host
+  (www.sparkapi.io). Status is the HTTP code observed on 2026-07-26. Only one real document
+  exists: the OpenID Connect discovery document on sparkplatform.com, which is also the only
+  machine-readable contract Spark serves anonymously. It was harvested in the previous round
+  and is indexed here rather than duplicated. sparkplatform.com answers every other
+  /.well-known/ path with a 302 to an underscore-rewritten path (e.g. /.well_known/api_catalog)
+  that does not exist — a routing artifact, not a document.
+hosts:
+  - host: https://sparkplatform.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        type: application/json
+        file: authentication/spark-platform-openid-configuration.json
+        note: >-
+          RFC 8414 / OpenID Connect Discovery. Issuer https://sparkplatform.com; authorization,
+          token, userinfo and revocation endpoints under /openid/. Scopes include a RESO scope
+          and the claim set carries MLS identity (MemberMlsId, MemberNrdsId, MemberStateLicense,
+          MemberAOR, OfficeMlsId).
+      - path: /openid/jwks.json
+        status: 200
+        type: application/json
+        file: authentication/spark-platform-openid-jwks.json
+        note: JWKS referenced by jwks_uri in the discovery document (not under /.well-known/).
+      - path: /.well-known/security.txt
+        status: 302
+        note: Redirects to /.well_known/security_txt; no RFC 9116 document is served.
+      - path: /.well-known/oauth-authorization-server
+        status: 302
+        note: Redirects to /.well_known/oauth_authorization_server; not served.
+      - path: /.well-known/api-catalog
+        status: 302
+        note: Redirects to /.well_known/api_catalog; not served (RFC 9727 not implemented).
+      - path: /.well-known/ai-plugin.json
+        status: 302
+  - host: https://sparkapi.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+    note: >-
+      All 404s are the Spark API's own JSON envelope
+      {"D":{"Success":false,"Code":404,"Message":"Not Found"}} — the API host is answering, it
+      simply publishes no discovery documents.
+  - host: https://replication.sparkapi.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://www.sparkapi.io
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+    note: WordPress marketing site; 404s are HTML pages.
+
+security_txt:
+  present: false
+  note: >-
+    No RFC 9116 security.txt on any Spark host. No vulnerability-disclosure or bug-bounty
+    program was found either — see security/ (the probe wrote nothing because there was
+    nothing to record).
+
+robots:
+  url: https://sparkplatform.com/robots.txt
+  status: 200
+  note: >-
+    The documentation host disallows every named AI crawler (ClaudeBot, Claude-User,
+    Claude-SearchBot, GPTBot, ChatGPT-User, OAI-SearchBot, CCBot, PerplexityBot,
+    meta-externalagent, Amazonbot and others) with Disallow: / — recorded because it is a real
+    agent-readiness signal: the docs are public to humans and closed to crawling agents.

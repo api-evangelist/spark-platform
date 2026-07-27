@@ -1,0 +1,137 @@
+generated: '2026-07-26'
+method: searched
+source: >-
+  https://services.reso.org/orgs?showStats=true&showEndorsements=true (RESO Organizations and
+  Endorsements feed, HTTP 200, fetched 2026-07-26 — machine-readable and independently
+  verifiable), https://sparkplatform.com/docs/reso/overview,
+  https://sparkplatform.com/.well-known/openid-configuration,
+  https://sparkplatform.com/docs/webhooks/webhooks,
+  https://sparkplatform.com/docs/supporting_documentation/standard_response_format.
+description: >-
+  Which industry and cross-cutting standards Spark Platform actually conforms to. Unusually for
+  this catalog, most of the claims here are third-party verifiable rather than vendor-asserted:
+  FBS is a RESO Certified technology provider (Unique Organization Identifier T00000052,
+  CertificationStatus "Certified Current") and appears as the certifying ProviderUoi on Web API
+  Core 2.0.0 and Data Dictionary 1.7/2.0 endorsements for 140 organizations in RESO's own
+  public feed. The counterweight: certification attaches to the MLS organizations, and every
+  certified endpoint — including the OData $metadata contract — returns HTTP 401 to an
+  unlicensed caller.
+
+standards:
+  - id: reso-web-api-core-2.0.0
+    conforms: true
+    evidence: >-
+      RESO organizations feed lists FBS (T00000052) as ProviderUoi on Web API Core 2.0.0
+      endorsements for 139 organizations (115 Certified, 24 Passed). Implemented at
+      https://replication.sparkapi.com/Version/3/Reso/OData/.
+    certifying_body: RESO
+    verifiable_at: https://services.reso.org/orgs?showStats=true&showEndorsements=true
+
+  - id: reso-data-dictionary-1.7
+    conforms: true
+    evidence: RESO feed — FBS as ProviderUoi on Data Dictionary 1.7 endorsements (110 Certified, 19 Passed).
+
+  - id: reso-data-dictionary-2.0
+    conforms: true
+    evidence: RESO feed — FBS as ProviderUoi on Data Dictionary 2.0 endorsements (72 Certified, 17 Passed).
+
+  - id: reso-webhooks-1.0.0
+    conforms: true
+    evidence: >-
+      FBS holds the endorsement directly (Status Certified, updated 2024-10-22). Implemented as
+      outbound RESO Entity Event webhooks — see asyncapi/spark-platform-webhooks.yml.
+
+  - id: reso-common-format-2.0
+    conforms: true
+    evidence: FBS holds the endorsement directly (Status Certified, updated 2024-10-22).
+
+  - id: odata-4.0
+    conforms: true
+    evidence: >-
+      The RESO Web API is an OData service; $metadata, $select, $expand, $filter and
+      entity-key addressing (Property('<ListingKey>')/Media) are used throughout the vendor's
+      own Postman collection. The $metadata document is 401-gated, so conformance is asserted
+      from the documented and exercised surface rather than from a retrieved CSDL.
+
+  - id: openid-connect-discovery
+    conforms: true
+    evidence: >-
+      https://sparkplatform.com/.well-known/openid-configuration returns a complete discovery
+      document (HTTP 200) with issuer, authorization/token/userinfo/revocation endpoints, JWKS
+      URI and RS256 signing.
+
+  - id: oauth2
+    conforms: true
+    evidence: OAuth 2 authorization code flow plus Bearer access tokens documented at /docs/authentication/access_token.
+
+  - id: rfc7009-token-revocation
+    conforms: true
+    evidence: revocation_endpoint https://sparkplatform.com/openid/revoke advertised in the discovery document.
+
+  - id: saml-2.0
+    conforms: true
+    evidence: SAML service-provider integration with flexmls Web documented at /docs/authentication/saml.
+
+  - id: rets
+    conforms: true
+    evidence: >-
+      Legacy RETS interface still documented and operating (/docs/rets/overview), being
+      superseded by the Web API — see lifecycle/spark-platform-lifecycle.yml.
+
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      Errors use a proprietary "D" envelope with numeric Spark codes, not application/problem+json.
+      The OData surface uses the OData error object. See errors/spark-platform-error-codes.yml.
+
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: No /.well-known/security.txt on any Spark host (all 302/404 on 2026-07-26).
+
+  - id: rfc8594-sunset-header
+    conforms: false
+    evidence: No Sunset or Deprecation header support documented.
+
+  - id: rfc9727-api-catalog
+    conforms: false
+    evidence: /.well-known/api-catalog not served.
+
+  - id: openapi
+    conforms: false
+    evidence: >-
+      No OpenAPI or Swagger document is published on the docs host or either API host (all
+      probes 404 on 2026-07-26). The only machine-readable API artifacts are the OIDC discovery
+      document and the vendor's public Postman collection.
+
+  - id: reso-universal-property-identifier
+    conforms: unknown
+    evidence: >-
+      No reference to the RESO UPI was found in the documentation navigation or RESO Web API
+      pages. Absence of documentation is not evidence of absence in the underlying data.
+
+certification:
+  body: RESO (Real Estate Standards Organization)
+  organization: FBS
+  organization_uoi: T00000052
+  status: Certified Current
+  summary_url: https://certification.reso.org/summary/T00000052
+  summary_url_note: Returns HTTP 400 to a plain GET — RESO Analytics is a browser application, not a machine-readable endpoint.
+  machine_readable_feed: https://services.reso.org/orgs?showStats=true&showEndorsements=true
+  organizations_covered_as_provider: 140
+  mandate_note: >-
+    RESO certification is required of MLSs by the National Association of REALTORS — an industry
+    body, not a government regulator. Spark's exposure is the vendor side of that private
+    mandate.
+
+not_found:
+  - {id: soc2, note: No SOC 2 claim published.}
+  - {id: iso-27001, note: No ISO 27001 claim published.}
+  - {id: pci-dss, note: Not applicable — no card data surface.}
+  - id: gdpr
+    note: >-
+      Privacy Policy published at /docs/terms_of_use/privacy; no explicit GDPR programme page.
+      Home market is the United States.
+  - id: trust-center
+    note: >-
+      No trust.* or /security page exists — probe-security-programs.py returned trust=none,
+      vdp=none on 2026-07-26.

@@ -1,0 +1,403 @@
+generated: '2026-07-26'
+method: derived
+source: >-
+  postman/spark-platform-spark-web-api-queries.postman_collection.json — the vendor's own
+  public Postman collection "Spark Web API Queries"
+  (https://documenter.getpostman.com/view/25548936/2s935snM26, HTTP 200, harvested verbatim
+  2026-07-26 and linked from
+  https://sparkplatform.com/docs/supporting_documentation/search_and_paging_syntax).
+description: >-
+  Real, first-party request examples for both Spark surfaces, flattened out of FBS's published
+  Postman collection. Spark publishes no OpenAPI, so this collection is the only structured
+  inventory of callable paths the vendor puts in the open — 64 requests across the Spark API
+  (/v1) and the RESO Web API (/Reso/OData). Placeholders such as <Insert_ListingKey> and
+  <Insert_MlsId> are the vendor's own; no values are invented here, and every request requires
+  a licensed Bearer token (all return HTTP 401 anonymously). Note that the collection routes
+  Spark API traffic at replication.sparkapi.com rather than sparkapi.com — the read/replication
+  host — which matches error code 1021 in errors/spark-platform-error-codes.yml.
+collection:
+  name: Spark Web API Queries
+  public_url: https://documenter.getpostman.com/view/25548936/2s935snM26
+  file: postman/spark-platform-spark-web-api-queries.postman_collection.json
+  request_count: 64
+examples:
+  - group: Spark API / Get Accounts
+    name: All Accounts
+    method: GET
+    url: https://replication.sparkapi.com/v1/accounts?
+    desc: ''
+  - group: Spark API / Get Accounts
+    name: Individual Account
+    method: GET
+    url: https://replication.sparkapi.com/v1/accounts/<insert_Id_here>
+    desc: ''
+  - group: Spark API / Get Accounts
+    name: 'Accounts: Associations'
+    method: GET
+    url: https://replication.sparkapi.com/v1/accounts/<Account.Id>/associations
+    desc: The Accounts Associations service lists the association data for a given user. http://sparkplatform.com/docs/api_services/my_account/accounts_associations
+  - group: Spark API / Get Accounts
+    name: 'Accounts: Profile'
+    method: GET
+    url: https://replication.sparkapi.com/v1/accounts/<Account.Id>/profile
+    desc: The Profile sub-service allows management of the profile data associated with the active user.
+      http://sparkplatform.com/docs/api_services/my_account/profile
+  - group: Spark API / PUT/POST Accounts
+    name: PUT Account
+    method: PUT
+    url: https://replication.sparkapi.com/v1/accounts/<Account.Id>
+    desc: ''
+  - group: Spark API / PUT/POST Accounts
+    name: POST Account
+    method: POST
+    url: https://replication.sparkapi.com/v1/accounts/<Account.Id>
+    desc: ''
+  - group: Spark API / Get Listings
+    name: All Listings
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings
+    desc: ''
+  - group: Spark API / Get Listings
+    name: Listing Documents
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/<Insert_ListingKey>/documents
+    desc: The Listing Documents service allows management and retrieval for listing documents. http://sparkplatform.com/docs/api_services/listings/listing_documents
+  - group: Spark API / Get Listings
+    name: Listing History
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/<Insert_ListingKey>/history
+    desc: http://sparkplatform.com/docs/api_services/listings/history
+  - group: Spark API / Get Listings
+    name: Listing Photos
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/<Insert_ListingKey>/photos
+    desc: The Listing Photos service returns data about listing photos for a specific listing to be retrieved.
+      URIs to various photo sizes are returned rather than image files. http://sparkplatform.com/docs/api_services/listings/photos
+  - group: Spark API / Get Listings
+    name: Listing Videos
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/<Insert_ListingKey>/videos
+    desc: The Listing Videos sub-service retrieval of URIs to videos associated with a specified listing.
+      http://sparkplatform.com/docs/api_services/listings/videos
+  - group: Spark API / Get Listings
+    name: MLS Datashare Listings
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings?_filter=MlsId eq '<Insert_MlsId>'
+    desc: If you are subscribed to an MLS that participates in a datashare, this query allows you to retrieve
+      listings from that datashare. You can pull a list of MlsId values by using the following query -
+      https://replication.sparkapi.com/v1/standardfields/MlsId
+  - group: Spark API / Get Listings
+    name: Virtual Tours
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/Insert_ListingKey/virtualtours?
+    desc: The Virtual Tours sub-service retrieval of URIs to virtual tours associated with a specified
+      listing. http://sparkplatform.com/docs/api_services/listings/virtual_tours
+  - group: Spark API / Incomplete Listings
+    name: All Incomplete Listings
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/incomplete
+    desc: ''
+  - group: Spark API / Get Metadata
+    name: Accounts Metadata
+    method: GET
+    url: https://replication.sparkapi.com/v1/accounts/meta
+    desc: The Accounts Metadata service describes the allowable values for searching and updating various
+      account and profile fields, often varying by MLS. Please note, this query does not display actual
+      listing data. http://sparkplatform.com/docs/api_services/my_account/accounts_meta
+  - group: Spark API / Get Metadata
+    name: Photos Metadata
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/photos/meta
+    desc: The Photos Metadata service describes the defined Tags and Privacy values for listing photos
+      . Please note, this query does not display actual listing data. http://sparkplatform.com/docs/api_services/listings/photos_meta
+  - group: Spark API / Get Metadata
+    name: Videos Metadata
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/videos/meta
+    desc: The Videos Metadata service describes the defined Privacy values for listing videos . Please
+      note, this query does not display actual listing data. http://sparkplatform.com/docs/api_services/listings/videos_meta
+  - group: Spark API / Get Metadata
+    name: Virtual Tours Metadata
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/virtualtours/meta
+    desc: The Videos Metadata service describes the defined Privacy values for listing videos . Please
+      note, this query does not display actual listing data. http://sparkplatform.com/docs/api_services/listings/videos_meta
+  - group: Spark API / Get Metadata
+    name: Documents Metadata
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/documents/meta
+    desc: The Documents Metadata service describes the allowable values for listing documents , which
+      varies by MLS. Please note, this query does not display actual listing data. http://sparkplatform.com/docs/api_services/listings/documents_meta
+  - group: Spark API / Get Metadata
+    name: Custom Fields
+    method: GET
+    url: https://replication.sparkapi.com/v1/customfields
+    desc: The Custom Fields API allows retrieval of grouped lists of supported custom fields. Please note,
+      this query does not display actual listing data. http://sparkplatform.com/docs/api_services/custom_fields
+  - group: Spark API / Get Metadata
+    name: Custom Field Groups
+    method: GET
+    url: https://replication.sparkapi.com/v1/customfields/groups
+    desc: Displays groups of supported custom fields. Please note, this query does not display actual
+      listing data. http://sparkplatform.com/docs/api_services/custom_fields/groups
+  - group: Spark API / Get Metadata
+    name: Property Type Labels
+    method: GET
+    url: https://replication.sparkapi.com/v1/standardfields/PropertyTypeLabel
+    desc: The Property Types service returns a list of possible listing property types for the current
+      user’s MLS. Please note, this query does not display actual listing data. http://sparkplatform.com/docs/api_services/standard_fields
+  - group: Spark API / Get Metadata
+    name: Get MLS Standard Fields
+    method: GET
+    url: https://replication.sparkapi.com/v1/mls/<Insert_MlsId>/standardfields
+    desc: The Standard Fields API allows retrieval of a list of supported standard fields and list items.
+      Of special note is the MlsId field, which informs which other MLSs the current user may search.
+      Please note, this query does not display actual listing data. http://sparkplatform.com/docs/api_services/sta
+  - group: Spark API / Get Metadata
+    name: 'Flexmls: Listing Field List Meta Translations'
+    method: GET
+    url: https://replication.sparkapi.com/v1/flexmls/propertytypes/<PropertyType.MlsCode>/fields/fieldslists/translation
+    desc: This service provides a dictionary that translates the FieldList.Value for standard and custom
+      fields to their corresponding values in Flexmls Web. Please note, this query does not display actual
+      listing data. http://sparkplatform.com/docs/api_services/flexmls/listing_meta_translations
+  - group: Spark API / Get Metadata
+    name: 'Flexmls: Listing Meta Origins'
+    method: GET
+    url: https://replication.sparkapi.com/v1/flexmls/propertytypes/<PropertyType.MlsCode>/origins
+    desc: 'This service exposes the relationship between standard and custom fields, specifically which
+      custom fields a standard field is composed of, and which standard fields a custom field contributes
+      to. It is important to distinguish this service from translations which includes only fields that
+      directly '
+  - group: Spark API / Get Metadata
+    name: 'Flexmls: Listing Meta Translations'
+    method: GET
+    url: https://replication.sparkapi.com/v1/flexmls/propertytypes/<PropertyType.MlsCode>/translations
+    desc: This service provides a dictionary that translates standard and custom fields to their corresponding
+      field data used by Flexmls Web. Please note, this query does not display actual listing data. http://sparkplatform.com/docs/api_services/flexmls/listing_meta_translations
+  - group: Spark API / Get Metadata
+    name: Get MLS Data Share
+    method: GET
+    url: https://replication.sparkapi.com/v1/standardfields/MlsId
+    desc: This query will allow you to pull a list of MlsIds belonging to the MLSs that are allowed to
+      pull listings from the MLS that participates in datashare." Please note, this query does not display
+      actual listing data.
+  - group: Spark API / Get Standard Fields
+    name: All Standard Fields
+    method: GET
+    url: https://replication.sparkapi.com/v1/standardfields
+    desc: This query will pull all of the standard fields for the MLS your API key is subscribed to. This
+      is not to be confused with https://replication.sparkapi.com/v1/mls//standardfields which pulls all
+      of the standard fields MLSs that participate in datashare with the MLS your API key is subscribed
+      to. End
+  - group: Spark API / Get Standard Fields
+    name: MLS Datashare Standard Fields
+    method: GET
+    url: 'https://replication.sparkapi.com/v1/mls/<Insert_MlsId>/standardfields '
+    desc: This query will pull all of the standard fields for the MLS that participates in datashare with
+      the MLS your API key is subscribed to. This is not to be confused with https://replication.sparkapi.com/v1/standardfields
+      which will pull all of the standard fields only for the MLS your API key is subscr
+  - group: Spark API / Get Open Houses
+    name: All Open Houses
+    method: GET
+    url: https://replication.sparkapi.com/v1/openhouses
+    desc: http://sparkplatform.com/docs/api_services/listings/open_houses
+  - group: Spark API / Advanced Use / Newsfeeds
+    name: 'Developers: News Feed Webhooks'
+    method: GET
+    url: https://replication.sparkapi.com/v1/developers/newsfeeds/webhooks
+    desc: When creating news feeds , developers can register webhooks to receive POST requests for event
+      notifications in place of the typical e-mail or device push notification. http://sparkplatform.com/docs/api_services/developers/newsfeed_webhooks
+  - group: Spark API / Advanced Use / Newsfeeds
+    name: Newsfeeds
+    method: GET
+    url: ''
+    desc: A news feed is a subscription to a data point or actions of interest, such as the results of
+      a saved search . These subscriptions generate news feed events . http://sparkplatform.com/docs/api_services/newsfeed
+  - group: Spark API / Advanced Use / Contacts
+    name: All Contacts
+    method: GET
+    url: https://replication.sparkapi.com/v1/contacts
+    desc: http://sparkplatform.com/docs/api_services/contacts
+  - group: Spark API / Advanced Use / Contacts
+    name: 'Contacts: Activity'
+    method: GET
+    url: https://replication.sparkapi.com/v1/contacts/<Contact.Id>/activity
+    desc: This service summarizes various contact activity data points, such as the number of emails sent
+      to and opened by the contact. http://sparkplatform.com/docs/api_services/contacts/activity
+  - group: Spark API / Advanced Use / Contacts
+    name: 'Contacts: Export'
+    method: GET
+    url: https://replication.sparkapi.com/v1/contacts/export/all
+    desc: The export sub-service allows a set of all contacts under control of the current account to
+      be exported based on the time the resources were last modified. http://sparkplatform.com/docs/api_services/contacts/export
+  - group: Spark API / Advanced Use / Contacts
+    name: Contact Tags
+    method: GET
+    url: https://replication.sparkapi.com/v1/contacts/tags
+    desc: http://sparkplatform.com/docs/api_services/contacts/tags
+  - group: Spark API / Advanced Use / Contacts
+    name: 'Contacts: Portal/VOW Accounts'
+    method: GET
+    url: https://replication.sparkapi.com/v1/contacts/<Contact.Id>/portal
+    desc: The Portal account sub-service provides access to consumer account information. These accounts
+      are automatically created when a contact is created or edited, but older contacts may not yet have
+      a corresponding consumer account. http://sparkplatform.com/docs/api_services/contacts/vow
+  - group: Spark API / Advanced Use / Map / Geo Related
+    name: Overlays
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/overlays
+    desc: The Overlays service returns Overlays, which are collections of Shapes , for use in searching
+      and display. http://sparkplatform.com/docs/api_services/overlays
+  - group: Spark API / Advanced Use / Map / Geo Related
+    name: 'Overlays: Shapes'
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/overlays/shapes
+    desc: 'The Overlays: Shapes service returns Shapes that are present in Overlays . http://sparkplatform.com/docs/api_services/overlays/shapes'
+  - group: Spark API / Advanced Use / Map / Geo Related
+    name: Listings Clusters
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/clusters
+    desc: Allows retrieval of clustered listings as bounded to a given location. A typical use case for
+      this service is to retrieve clusters for a given location and map them. At that point, a user could
+      drill down into a given cluster using a location search returning the listings that comprised the
+      cluster.
+  - group: Spark API / Advanced Use / Map / Geo Related
+    name: 'Flexmls: Mapping: Layers'
+    method: GET
+    url: https://replication.sparkapi.com/v1/flexmls/mapping/layers
+    desc: 'The Flexmls: Mapping: Layers service provides the tile layers available on the flexmls map
+      server. http://sparkplatform.com/docs/api_services/flexmls/mapping/layers'
+  - group: Spark API / Advanced Use / Map / Geo Related
+    name: 'Flexmls: Mapping: Shapegen'
+    method: GET
+    url: https://replication.sparkapi.com/v1/flexmls/mapping/shapegen
+    desc: 'The Flexmls: Mapping: Shapegen service provides a way for apps that use SparkQL Listing filters
+      to generate shapefiles via the Shapegen process. http://sparkplatform.com/docs/api_services/flexmls/mapping/shapegen'
+  - group: Spark API / Advanced Use / Market Statistics
+    name: Absorption
+    method: GET
+    url: https://replication.sparkapi.com/v1/marketstatistics/absorption
+    desc: 'Common parameters plus the following: GET Request Name Required Expected Notes Options No Comma-separated
+      string with one or many of the following options: - AbsorptionRate The default if no Options parameter
+      is specified is AbsorptionRate'
+  - group: Spark API / Advanced Use / Market Statistics
+    name: Inventory
+    method: GET
+    url: https://replication.sparkapi.com/v1/marketstatistics/inventory
+    desc: 'Common parameters plus the following: GET Request Name Required Expected Notes Options No Comma-separated
+      string with one or many of the following options: - ActiveListings - NewListings - PendedListings
+      - SoldListings The default if no Options parameter is specified is ActiveListings,NewListings'
+  - group: Spark API / Advanced Use / Market Statistics
+    name: Price
+    method: GET
+    url: https://replication.sparkapi.com/v1/marketstatistics/price
+    desc: 'Common parameters plus the following: GET Request Name Required Expected Notes Options No Comma-separated
+      string with one or many of the following options: - ActiveAverageListPrice - NewAverageListPrice
+      - PendedAverageListPrice - SoldAverageListPrice - SoldAverageSoldPrice - ActiveMedianListPrice - '
+  - group: Spark API / Advanced Use / Market Statistics
+    name: Ratio
+    method: GET
+    url: https://replication.sparkapi.com/v1/marketstatistics/ratio
+    desc: 'Common parameters plus the following: GET Request Name Required Expected Notes Options No Comma-separated
+      string with one or many of the following options: - SaleToOriginalListPriceRatio - SaleToListPriceRatio
+      The default if no Options parameter is specified is SaleToOriginalListPriceRatio'
+  - group: Spark API / Advanced Use / Market Statistics
+    name: Days On Market
+    method: GET
+    url: https://replication.sparkapi.com/v1/marketstatistics/dom
+    desc: 'Common parameters plus the following: GET Request Name Required Expected Notes Options No Comma-separated
+      string with one or many of the following options: - AverageDom - AverageCdom The default if no Options
+      parameter is specified is AverageDom'
+  - group: Spark API / Advanced Use / Market Statistics
+    name: Volume
+    method: GET
+    url: https://replication.sparkapi.com/v1/marketstatistics/volume
+    desc: 'Common parameters plus the following: GET Request Name Required Expected Notes Options No Comma-separated
+      string with one or many of the following options: - ActiveListVolume - NewListVolume - PendedListVolume
+      - SoldListVolume - SoldSaleVolume The default if no Options parameter is specified is Acti'
+  - group: Spark API / Advanced Use
+    name: 'Listings: FloPlans'
+    method: GET
+    url: https://replication.sparkapi.com/v1/listings/<Insert_ListingKey>/floplans
+    desc: FloPlans are images of the layout, or 'flow', for a listing. Not all MLSs are integrated with
+      this product. Users in an MLS with this feature enabled will have FloPlans present in the Settings.FlexmlsProducts
+      attribute for their account . If available, this data will also be available as a floor pla
+  - group: Spark API / Advanced Use
+    name: Listing Carts
+    method: GET
+    url: https://replication.sparkapi.com/v1/contacts/<Contact.Id>/listingcarts
+    desc: Listing Carts are a personal collection of listings that can be modified or used as search criteria.
+      http://sparkplatform.com/docs/api_services/listing_carts
+  - group: Spark API / Advanced Use
+    name: All Saved Searches
+    method: GET
+    url: https://replication.sparkapi.com/v1/savedsearches
+    desc: The Saved Searches service allows retrieval and management of saved searches for the current
+      user. http://sparkplatform.com/docs/api_services/saved_searches
+  - group: RESO Web API / Get Green Verification
+    name: Green Verification for a property
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Property('Insert_ListingKey')/GreenVerification
+    desc: ''
+  - group: RESO Web API / Get Lookup
+    name: Lookup field values
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Lookup
+    desc: ''
+  - group: RESO Web API / Get Media
+    name: All Media for a Property
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Property('<Insert_ListingKey>')/Media
+    desc: ''
+  - group: RESO Web API / Get Media
+    name: Specific Media Record for a Property
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Property('<Insert_ListingKey>')/Media('<MediaKey>')
+    desc: ''
+  - group: RESO Web API / Get Media
+    name: $select Media Fields
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Property/Media?$expand=Media($select=ResourceRecordKey,Order,MediaURL,PreferredPhotoYN)
+    desc: 'You can also use $top, $skip, etc within those paranthesis (and/or in conjunction). For example:
+      $expand=Media($select=ResourceRecordKey,Order,MediaURL,PreferredPhotoYN;$top=1)'
+  - group: RESO Web API / Get Metadata
+    name: All Metadata
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/$metadata
+    desc: Get Metadata for the Web API feed. Note that the metadata returned will vary depending on the
+      role of the key you supply as well as the MLS you connect to.
+  - group: RESO Web API / Get Member
+    name: All Members
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Member
+    desc: ''
+  - group: RESO Web API / Get Office
+    name: All Offices
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Office
+    desc: ''
+  - group: RESO Web API / Get Open Houses
+    name: All Open Houses
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/OpenHouse
+    desc: ''
+  - group: RESO Web API / Get Power Production
+    name: Power Production for a property
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Property('<Insert_ListingKey>')/PowerProduction
+    desc: ''
+  - group: RESO Web API / Get Property
+    name: All Properties
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Property
+    desc: Get available Property resources, without specifying any filter, top, or limit
+  - group: RESO Web API / Get Room
+    name: All Rooms
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Property('<Insert_ListingKey>')/Room
+    desc: ''
+  - group: RESO Web API / Get Unit
+    name: All Units
+    method: GET
+    url: https://replication.sparkapi.com/Reso/OData/Property('<Insert_ListingKey>')/Unit
+    desc: ''

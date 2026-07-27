@@ -1,0 +1,121 @@
+generated: '2026-07-26'
+method: searched
+source: >-
+  https://sparkplatform.com/docs/supporting_documentation/api_clients (the vendor's own
+  "Spark(R) API Clients" page, HTTP 200) cross-checked against the sparkapi GitHub
+  organization (https://github.com/sparkapi, HTTP 200), RubyGems, and Packagist. Registry
+  metadata (version, download count) read from the registry APIs on 2026-07-26.
+description: >-
+  First-party Spark Platform client libraries published by FBS. Five languages are listed on
+  the vendor's own API Clients page — Ruby, PHP, Java, Objective-C (iOS) and Android — plus a
+  standalone parser for the SparkQL filter grammar and a RESO-compliant feed faker used for
+  local testing. Only Ruby and PHP libraries are actually distributed through a package
+  registry; the Java, iOS and Android clients are source-only GitHub repositories with no
+  Maven Central / CocoaPods coordinates found. Several repositories have not been updated in
+  years and freshness is recorded per package rather than smoothed over.
+docs: https://sparkplatform.com/docs/supporting_documentation/api_clients
+
+packages:
+  - language: ruby
+    registry: rubygems
+    name: spark_api
+    url: https://rubygems.org/gems/spark_api
+    source: https://github.com/sparkapi/spark_api
+    install: gem install spark_api
+    official: true
+    version: 2.0.3
+    downloads: 232098
+    last_repo_push: '2026-05-08'
+    note: The flagship client — "Ruby client library for communication with the Spark API".
+  - language: ruby
+    registry: rubygems
+    name: sparkql
+    url: https://rubygems.org/gems/sparkql
+    source: https://github.com/sparkapi/sparkql
+    install: gem install sparkql
+    official: true
+    version: 1.3.6
+    downloads: 112550
+    last_repo_push: '2026-06-25'
+    note: >-
+      Racc-based parser for the SparkQL _filter syntax. Not an API client — the grammar
+      implementation, useful for validating filters before they are sent.
+  - language: php
+    registry: packagist
+    name: sparkapi/sparkapi
+    url: https://packagist.org/packages/sparkapi/sparkapi
+    source: https://github.com/sparkapi/sparkapi4p2
+    install: composer require sparkapi/sparkapi
+    official: true
+    downloads: 20252
+    last_repo_push: '2021-11-28'
+    note: "PHP wrapper for the Spark REST API (repository name: sparkapi4p2)."
+  - language: php
+    registry: packagist
+    name: sparkapi/feed-faker
+    url: https://packagist.org/packages/sparkapi/feed-faker
+    source: https://github.com/sparkapi/feed-faker
+    install: composer require sparkapi/feed-faker
+    official: true
+    downloads: 2260
+    last_repo_push: '2018-11-01'
+    note: >-
+      RESO-compliant data feed faker — generates fake RESO standard-field data for local
+      development while the real feed is licence-gated. See sandbox/spark-platform-sandbox.yml.
+  - language: java
+    registry: null
+    name: SparkJava
+    url: https://github.com/sparkapi/SparkJava
+    source: https://github.com/sparkapi/SparkJava
+    official: true
+    last_repo_push: '2021-06-04'
+    note: >-
+      "Java interface for use with the Spark API". Source-only; no Maven Central artifact was
+      found (search.maven.org returned no matching coordinates on 2026-07-26).
+  - language: objective-c
+    registry: null
+    name: SparkiOS
+    url: https://github.com/sparkapi/SparkiOS
+    source: https://github.com/sparkapi/SparkiOS
+    official: true
+    last_repo_push: '2016-02-17'
+    note: Source-only iOS client. No CocoaPods/SPM coordinates published.
+  - language: java
+    registry: null
+    name: SparkAndroid
+    url: https://github.com/sparkapi/SparkAndroid
+    source: https://github.com/sparkapi/SparkAndroid
+    official: true
+    last_repo_push: '2013-03-07'
+    note: Android example application rather than a packaged client library.
+  - language: ruby
+    registry: null
+    name: reso_replicator_ruby
+    url: https://github.com/sparkapi/reso_replicator_ruby
+    source: https://github.com/sparkapi/reso_replicator_ruby
+    official: true
+    last_repo_push: '2020-01-02'
+    note: Worked example for replicating listing data and pulling updated listings.
+  - language: php
+    registry: null
+    name: wordpress-plugin
+    url: https://github.com/sparkapi/wordpress-plugin
+    source: https://github.com/sparkapi/wordpress-plugin
+    official: true
+    archived: true
+    last_repo_push: '2018-04-06'
+    note: >-
+      Archived. The maintained IDX display products (WordPress plugin, SmartFrame) are sold
+      through fbsproducts.com — see components/spark-platform-components.yml.
+
+third_party_seen:
+  - {name: thinkerytim/oauth2-flexmls, registry: packagist, note: League OAuth2 client provider for Flexmls, official: false}
+  - {name: socialiteproviders/flexmls, registry: packagist, note: Laravel Socialite provider for Flexmls, official: false}
+
+not_found:
+  - {registry: npm, note: No first-party JavaScript/TypeScript client published for Spark or Flexmls.}
+  - {registry: pypi, note: "No first-party Python client. pypi.org/project/sparkapi is an unrelated Cisco Spark wrapper."}
+  - {registry: maven-central, note: No published coordinates for SparkJava.}
+  - {registry: nuget, note: No first-party .NET client found.}
+  - {registry: crates.io, note: No first-party Rust client found.}
+  - {registry: pkg.go.dev, note: No first-party Go client found.}
