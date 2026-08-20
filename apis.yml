@@ -27,6 +27,16 @@ description: >-
   market is the United States.
 image: https://www.sparkapi.io/wp-content/uploads/2023/07/cropped-Spark_Pin_Favicon-192x192.png
 tags:
+- Real-Estate
+- United States
+- MLS
+- RESO
+- Property Listings
+- IDX
+- PropTech
+- Listing Data Infrastructure
+- OData
+tags_raw:
 - Real Estate
 - United States
 - MLS
@@ -53,6 +63,11 @@ apis:
   humanURL: https://sparkplatform.com/docs/overview/api
   baseURL: https://sparkapi.com/v1
   tags:
+  - MLS
+  - Property Listings
+  - Real-Estate
+  - IDX
+  tags_raw:
   - MLS
   - Property Listings
   - Real Estate
@@ -99,6 +114,12 @@ apis:
   - OData
   - MLS
   - Property Listings
+  - Real-Estate
+  tags_raw:
+  - RESO
+  - OData
+  - MLS
+  - Property Listings
   - Real Estate
   properties:
   - type: Documentation
@@ -132,6 +153,11 @@ apis:
   humanURL: https://sparkplatform.com/docs/webhooks/webhooks
   baseURL: https://replication.sparkapi.com/v1
   tags:
+  - Webhook
+  - RESO
+  - MLS
+  - Real-Estate
+  tags_raw:
   - Webhooks
   - RESO
   - MLS
