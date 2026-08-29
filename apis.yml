@@ -25,6 +25,17 @@ description: >-
   data plan purchased through the Spark Datamart under an IDX, VOW or Private role, and a
   per-MLS fee. Certification here is real and verifiable; reachability is licensed. Home
   market is the United States.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.sparkapi.io/wp-content/uploads/2023/07/cropped-Spark_Pin_Favicon-192x192.png
 tags:
 - Real-Estate
