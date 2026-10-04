@@ -54,7 +54,7 @@ accessModel:
   method: derived
 image: https://www.sparkapi.io/wp-content/uploads/2023/07/cropped-Spark_Pin_Favicon-192x192.png
 tags:
-- Real-Estate
+- Real Estate
 - United States
 - MLS
 - RESO
@@ -73,6 +73,7 @@ tags_raw:
 - PropTech
 - Listing Data Infrastructure
 - OData
+- Real-Estate
 created: '2026-07-26'
 modified: '2026-07-26'
 specificationVersion: '0.23'
@@ -92,13 +93,14 @@ apis:
   tags:
   - MLS
   - Property Listings
-  - Real-Estate
+  - Real Estate
   - IDX
   tags_raw:
   - MLS
   - Property Listings
   - Real Estate
   - IDX
+  - Real-Estate
   properties:
   - type: Documentation
     url: https://sparkplatform.com/docs
@@ -141,13 +143,14 @@ apis:
   - OData
   - MLS
   - Property Listings
-  - Real-Estate
+  - Real Estate
   tags_raw:
   - RESO
   - OData
   - MLS
   - Property Listings
   - Real Estate
+  - Real-Estate
   properties:
   - type: Documentation
     url: https://sparkplatform.com/docs/reso/overview
@@ -183,12 +186,13 @@ apis:
   - Webhook
   - RESO
   - MLS
-  - Real-Estate
+  - Real Estate
   tags_raw:
   - Webhooks
   - RESO
   - MLS
   - Real Estate
+  - Real-Estate
   properties:
   - type: Documentation
     url: https://sparkplatform.com/docs/webhooks/webhooks
