@@ -20,7 +20,7 @@ edges:
     - RESO Common Format 2.0 Certified
     summary_url: https://certification.reso.org/summary/T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Commercial and Industrial Real Estate Brokers (CIREB)
   partner: null
   partner_match: null
@@ -41,7 +41,7 @@ edges:
     organization_type: Commercial
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Aberdeen Area Association of REALTORS®
   partner: null
   partner_match: null
@@ -63,7 +63,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Adirondack-Champlain Valley MLS
   partner: null
   partner_match: null
@@ -84,7 +84,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Aiken Association of REALTORS®
   partner: null
   partner_match: null
@@ -106,7 +106,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Alaska Multiple Listing Service
   partner: null
   partner_match: null
@@ -128,7 +128,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Allegheny Highland Association of REALTORS®
   partner: null
   partner_match: null
@@ -150,7 +150,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Amarillo Association of REALTORS®
   partner: null
   partner_match: null
@@ -171,7 +171,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: APEX MLS (Greater Louisville Association of REALTORS®)
   partner: null
   partner_match: null
@@ -193,7 +193,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Arizona Regional Multiple Listing Service (ARMLS)
   partner: null
   partner_match: null
@@ -215,7 +215,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Aspen Glenwood MLS
   partner: null
   partner_match: null
@@ -237,7 +237,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Badlands Board of REALTORS®
   partner: null
   partner_match: null
@@ -258,7 +258,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Batesville Board of REALTORS®
   partner: null
   partner_match: null
@@ -279,7 +279,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: BeachesMLS
   partner: null
   partner_match: null
@@ -300,7 +300,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Berkshire County Board of REALTORS®
   partner: null
   partner_match: null
@@ -321,7 +321,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: California Desert Association of REALTORS®
   partner: null
   partner_match: null
@@ -343,7 +343,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Cape Cod & Islands Association of REALTORS®
   partner: null
   partner_match: null
@@ -365,7 +365,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Central Arizona Association of REALTORS®
   partner: null
   partner_match: null
@@ -386,7 +386,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Central Iowa Board of REALTORS®
   partner: null
   partner_match: null
@@ -408,7 +408,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Central Missouri Board of REALTORS®
   partner: null
   partner_match: null
@@ -429,7 +429,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Central Panhandle Association of REALTORS®
   partner: null
   partner_match: null
@@ -450,7 +450,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Central Susquehanna Valley Board of REALTORS® MLS
   partner: null
   partner_match: null
@@ -471,7 +471,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Central West Tennessee Association of REALTORS®
   partner: null
   partner_match: null
@@ -492,7 +492,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: CHS Regional MLS (Charleston Trident Association of REALTORS®)
   partner: null
   partner_match: null
@@ -513,7 +513,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Clatsop Association of REALTORS®
   partner: null
   partner_match: null
@@ -534,7 +534,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Clearfield Jefferson Association of REALTORS®
   partner: null
   partner_match: null
@@ -555,7 +555,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Coeur d'Alene Multiple Listing Service
   partner: null
   partner_match: null
@@ -577,7 +577,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Columbia Board of REALTORS®
   partner: null
   partner_match: null
@@ -598,7 +598,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Columbus and Central Ohio Regional MLS
   partner: null
   partner_match: null
@@ -620,7 +620,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Conejo Simi Moorpark Association of REALTORS®
   partner: null
   partner_match: null
@@ -642,7 +642,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Daytona Beach Area Association of REALTORS®
   partner: null
   partner_match: null
@@ -664,7 +664,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Doorify MLS
   partner: null
   partner_match: null
@@ -686,7 +686,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: East Central South Dakota Board of REALTORS®
   partner: null
   partner_match: null
@@ -707,7 +707,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: East Mississippi REALTORS®
   partner: null
   partner_match: null
@@ -728,7 +728,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: East Tennessee REALTORS® MLS
   partner: null
   partner_match: null
@@ -750,7 +750,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Eastern Upper Peninsula Board of REALTORS®
   partner: null
   partner_match: null
@@ -772,7 +772,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Elk Cameron Board of REALTORS®
   partner: null
   partner_match: null
@@ -793,7 +793,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Emerald Coast Association of REALTORS®
   partner: null
   partner_match: null
@@ -814,7 +814,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Fayette-Nicholas Board of REALTORS®
   partner: null
   partner_match: null
@@ -835,7 +835,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Florida Keys Board of REALTORS®
   partner: null
   partner_match: null
@@ -856,7 +856,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Global MLS
   partner: null
   partner_match: null
@@ -878,7 +878,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Golden Triangle Association of REALTORS®
   partner: null
   partner_match: null
@@ -900,7 +900,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Grand County Board of REALTORS®
   partner: null
   partner_match: null
@@ -922,7 +922,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Grand Forks Area Association of REALTORS®
   partner: null
   partner_match: null
@@ -944,7 +944,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Great North MLS
   partner: null
   partner_match: null
@@ -966,7 +966,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Great Smoky Mountains Association of REALTORS®
   partner: null
   partner_match: null
@@ -988,7 +988,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Greater Antelope Valley Association of REALTORS®
   partner: null
   partner_match: null
@@ -1010,7 +1010,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Greater Chattanooga REALTORS®
   partner: null
   partner_match: null
@@ -1032,7 +1032,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Greater El Paso Association of REALTORS®
   partner: null
   partner_match: null
@@ -1054,7 +1054,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Greater Fort Polk Area REALTORS®
   partner: null
   partner_match: null
@@ -1075,7 +1075,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Greater Lansing Association of REALTORS®
   partner: null
   partner_match: null
@@ -1097,7 +1097,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Greater Scranton Board of REALTORS®
   partner: null
   partner_match: null
@@ -1118,7 +1118,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Greenbrier Valley Board of REALTORS®
   partner: null
   partner_match: null
@@ -1139,7 +1139,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Greenwich Association of REALTORS®
   partner: null
   partner_match: null
@@ -1161,7 +1161,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Hattiesburg Area Association of REALTORS®
   partner: null
   partner_match: null
@@ -1183,7 +1183,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Havre Hi-Line Chapter of Billings Association of REALTORS®
   partner: null
   partner_match: null
@@ -1205,7 +1205,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Heart of Missouri Board of REALTORS®
   partner: null
   partner_match: null
@@ -1227,7 +1227,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Hernando County Association of REALTORS®
   partner: null
   partner_match: null
@@ -1249,7 +1249,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Hive MLS
   partner: null
   partner_match: null
@@ -1271,7 +1271,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Hudson Valley Catskills Region Multiple List Service (Ulster County Board of REALTORS®)
   partner: null
   partner_match: null
@@ -1292,7 +1292,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Humboldt Association of REALTORS®
   partner: null
   partner_match: null
@@ -1313,7 +1313,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Huron Board of REALTORS®
   partner: null
   partner_match: null
@@ -1334,7 +1334,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Imagine MLS (Bluegrass REALTORS®)
   partner: null
   partner_match: null
@@ -1356,7 +1356,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Iron County Board of REALTORS®
   partner: null
   partner_match: null
@@ -1378,7 +1378,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Jefferson City Area Board of REALTORS®
   partner: null
   partner_match: null
@@ -1400,7 +1400,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Key West Association of REALTORS®
   partner: null
   partner_match: null
@@ -1421,7 +1421,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Lake Havasu Association of REALTORS®
   partner: null
   partner_match: null
@@ -1443,7 +1443,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Lake Martin Area Association of REALTORS®
   partner: null
   partner_match: null
@@ -1465,7 +1465,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Lakeway Area Association of REALTORS®
   partner: null
   partner_match: null
@@ -1487,7 +1487,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Lowcountry Regional MLS (Beaufort-Jasper County REALTORS®)
   partner: null
   partner_match: null
@@ -1509,7 +1509,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Lubbock Association of REALTORS®
   partner: null
   partner_match: null
@@ -1530,7 +1530,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Luzerne County Association of REALTORS®
   partner: null
   partner_match: null
@@ -1552,7 +1552,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Maine Listings
   partner: null
   partner_match: null
@@ -1574,7 +1574,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Marathon and Lower Keys Association of REALTORS®
   partner: null
   partner_match: null
@@ -1595,7 +1595,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Marco Island Area Association of REALTORS®
   partner: null
   partner_match: null
@@ -1617,7 +1617,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Martha's Vineyard MLS
   partner: null
   partner_match: null
@@ -1639,7 +1639,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Metro MLS
   partner: null
   partner_match: null
@@ -1661,7 +1661,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Middle Georgia MLS
   partner: null
   partner_match: null
@@ -1683,7 +1683,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Mitchell Board of REALTORS®
   partner: null
   partner_match: null
@@ -1704,7 +1704,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: MLS of Southern Arizona
   partner: null
   partner_match: null
@@ -1726,7 +1726,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: MLS of Yakima Association of REALTORS®
   partner: null
   partner_match: null
@@ -1747,7 +1747,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: MLS United
   partner: null
   partner_match: null
@@ -1769,7 +1769,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Montana Regional MLS
   partner: null
   partner_match: null
@@ -1790,7 +1790,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: MOREMLS (Monmouth Ocean Regional REALTORS®)
   partner: null
   partner_match: null
@@ -1812,7 +1812,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Muscatine Multiple Listing Service
   partner: null
   partner_match: null
@@ -1834,7 +1834,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Navarre Area Board of REALTORS®
   partner: null
   partner_match: null
@@ -1855,7 +1855,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: North Santa Barbara County Regional MLS
   partner: null
   partner_match: null
@@ -1877,7 +1877,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northeast Mississippi Board of REALTORS®
   partner: null
   partner_match: null
@@ -1898,7 +1898,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northeast Oklahoma Board of REALTORS®
   partner: null
   partner_match: null
@@ -1920,7 +1920,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northeast South Dakota Association of REALTORS®
   partner: null
   partner_match: null
@@ -1942,7 +1942,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northeast Washington Association of REALTORS®
   partner: null
   partner_match: null
@@ -1964,7 +1964,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northeast Wyoming REALTOR® Alliance
   partner: null
   partner_match: null
@@ -1985,7 +1985,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northern Arizona Association of REALTORS®
   partner: null
   partner_match: null
@@ -2007,7 +2007,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northern Kentucky Multiple Listing Service
   partner: null
   partner_match: null
@@ -2029,7 +2029,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northern Nevada Regional MLS
   partner: null
   partner_match: null
@@ -2050,7 +2050,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northwest Indiana REALTORS® Association
   partner: null
   partner_match: null
@@ -2071,7 +2071,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Northwest Ohio Real Estate Information Service (NORIS)
   partner: null
   partner_match: null
@@ -2092,7 +2092,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Oregon Coast Multiple Listing Service
   partner: null
   partner_match: null
@@ -2113,7 +2113,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Ozark Gateway Association of REALTORS®
   partner: null
   partner_match: null
@@ -2135,7 +2135,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Palm Beach Board of REALTORS®
   partner: null
   partner_match: null
@@ -2157,7 +2157,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Pampa Association of REALTORS®
   partner: null
   partner_match: null
@@ -2178,7 +2178,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Park City Board of REALTORS®
   partner: null
   partner_match: null
@@ -2200,7 +2200,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Pierre Area Multiple Listing Service (Central South Dakota Board of REALTORS®)
   partner: null
   partner_match: null
@@ -2221,7 +2221,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Pike/Wayne Association of REALTORS®
   partner: null
   partner_match: null
@@ -2242,7 +2242,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Plainview Association of REALTORS®
   partner: null
   partner_match: null
@@ -2264,7 +2264,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Pocono Mountains Association of REALTORS®
   partner: null
   partner_match: null
@@ -2286,7 +2286,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Prescott Area Association of REALTORS®
   partner: null
   partner_match: null
@@ -2307,7 +2307,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Randolph County Board of REALTORS®
   partner: null
   partner_match: null
@@ -2329,7 +2329,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: realMLS (Northeast Florida Multiple Listing Service)
   partner: null
   partner_match: null
@@ -2351,7 +2351,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: ROAM MLS
   partner: null
   partner_match: null
@@ -2372,7 +2372,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Roanoke Valley Association of REALTORS®
   partner: null
   partner_match: null
@@ -2394,7 +2394,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Rockbridge Highlands REALTORS®
   partner: null
   partner_match: null
@@ -2415,7 +2415,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Ruidoso/Lincoln County Association of REALTORS®
   partner: null
   partner_match: null
@@ -2436,7 +2436,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: San Juan County Board of REALTORS®
   partner: null
   partner_match: null
@@ -2458,7 +2458,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Santa Barbara Multiple Listing Service
   partner: null
   partner_match: null
@@ -2480,7 +2480,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Shasta Association of REALTORS®
   partner: null
   partner_match: null
@@ -2502,7 +2502,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Sheridan County Board of REALTORS®
   partner: null
   partner_match: null
@@ -2523,7 +2523,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Southern Missouri Regional MLS
   partner: null
   partner_match: null
@@ -2544,7 +2544,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Southern New Mexico MLS (Las Cruces Association of REALTORS®)
   partner: null
   partner_match: null
@@ -2565,7 +2565,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Southwest Iowa Association of REALTORS®
   partner: null
   partner_match: null
@@ -2587,7 +2587,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Southwest MLS (Greater Albuquerque Association of REALTORS®)
   partner: null
   partner_match: null
@@ -2608,7 +2608,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Space Coast MLS (Space Coast Association of REALTORS®)
   partner: null
   partner_match: null
@@ -2630,7 +2630,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Spanish Peaks MLS
   partner: null
   partner_match: null
@@ -2652,7 +2652,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Staten Island Multiple Listing Service
   partner: null
   partner_match: null
@@ -2674,7 +2674,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Sumter Board of REALTORS®
   partner: null
   partner_match: null
@@ -2695,7 +2695,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Sun Valley Board of REALTORS®
   partner: null
   partner_match: null
@@ -2716,7 +2716,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Telluride Association of REALTORS®
   partner: null
   partner_match: null
@@ -2737,7 +2737,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Tennessee/Virginia Regional MLS
   partner: null
   partner_match: null
@@ -2758,7 +2758,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Teton Board of REALTORS®
   partner: null
   partner_match: null
@@ -2780,7 +2780,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Tillamook Board of REALTORS®
   partner: null
   partner_match: null
@@ -2801,7 +2801,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Tulare County MLS
   partner: null
   partner_match: null
@@ -2823,7 +2823,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Vail Multi-List Service
   partner: null
   partner_match: null
@@ -2845,7 +2845,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Washington County Board of REALTORS®
   partner: null
   partner_match: null
@@ -2867,7 +2867,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Water Wonderland Board of REALTORS®
   partner: null
   partner_match: null
@@ -2888,7 +2888,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: West Branch Valley Association of REALTORS®
   partner: null
   partner_match: null
@@ -2909,7 +2909,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: West Central Association of REALTORS® (OH)
   partner: null
   partner_match: null
@@ -2931,7 +2931,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: Western Regional Information Systems & Technology (WRIST)
   partner: null
   partner_match: null
@@ -2953,7 +2953,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: White Mountain Association of REALTORS®
   partner: null
   partner_match: null
@@ -2975,7 +2975,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 - partner_name: MLS.ro
   partner: null
   partner_match: null
@@ -2996,7 +2996,7 @@ edges:
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
 generated: '2026-10-13'
 method: searched
 checked:

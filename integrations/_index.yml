@@ -26,7 +26,7 @@
     - RESO Common Format 2.0 Certified
     summary_url: https://certification.reso.org/summary/T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-commercial-and-industrial-real-estate-brokers-cireb
@@ -49,7 +49,7 @@
     organization_type: Commercial
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-aberdeen-area-association-of-realtors
@@ -73,7 +73,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-adirondack-champlain-valley-mls
@@ -96,7 +96,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-aiken-association-of-realtors
@@ -120,7 +120,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-alaska-multiple-listing-service
@@ -144,7 +144,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-allegheny-highland-association-of-realtors
@@ -168,7 +168,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-amarillo-association-of-realtors
@@ -191,7 +191,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-apex-mls-greater-louisville-association-of-realtors
@@ -215,7 +215,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-arizona-regional-multiple-listing-service-armls
@@ -239,7 +239,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-aspen-glenwood-mls
@@ -263,7 +263,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-badlands-board-of-realtors
@@ -286,7 +286,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-batesville-board-of-realtors
@@ -309,7 +309,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-beachesmls
@@ -332,7 +332,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-berkshire-county-board-of-realtors
@@ -355,7 +355,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-california-desert-association-of-realtors
@@ -379,7 +379,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-cape-cod-islands-association-of-realtors
@@ -403,7 +403,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-central-arizona-association-of-realtors
@@ -426,7 +426,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-central-iowa-board-of-realtors
@@ -450,7 +450,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-central-missouri-board-of-realtors
@@ -473,7 +473,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-central-panhandle-association-of-realtors
@@ -496,7 +496,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-central-susquehanna-valley-board-of-realtors-mls
@@ -519,7 +519,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-central-west-tennessee-association-of-realtors
@@ -542,7 +542,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-chs-regional-mls-charleston-trident-association-of-realtors
@@ -565,7 +565,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-clatsop-association-of-realtors
@@ -588,7 +588,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-clearfield-jefferson-association-of-realtors
@@ -611,7 +611,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-coeur-d-alene-multiple-listing-service
@@ -635,7 +635,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-columbia-board-of-realtors
@@ -658,7 +658,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-columbus-and-central-ohio-regional-mls
@@ -682,7 +682,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-conejo-simi-moorpark-association-of-realtors
@@ -706,7 +706,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-daytona-beach-area-association-of-realtors
@@ -730,7 +730,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-doorify-mls
@@ -754,7 +754,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-east-central-south-dakota-board-of-realtors
@@ -777,7 +777,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-east-mississippi-realtors
@@ -800,7 +800,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-east-tennessee-realtors-mls
@@ -824,7 +824,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-eastern-upper-peninsula-board-of-realtors
@@ -848,7 +848,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-elk-cameron-board-of-realtors
@@ -871,7 +871,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-emerald-coast-association-of-realtors
@@ -894,7 +894,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-fayette-nicholas-board-of-realtors
@@ -917,7 +917,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-florida-keys-board-of-realtors
@@ -940,7 +940,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-global-mls
@@ -964,7 +964,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-golden-triangle-association-of-realtors
@@ -988,7 +988,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-grand-county-board-of-realtors
@@ -1012,7 +1012,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-grand-forks-area-association-of-realtors
@@ -1036,7 +1036,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-great-north-mls
@@ -1060,7 +1060,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-great-smoky-mountains-association-of-realtors
@@ -1084,7 +1084,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-greater-antelope-valley-association-of-realtors
@@ -1108,7 +1108,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-greater-chattanooga-realtors
@@ -1132,7 +1132,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-greater-el-paso-association-of-realtors
@@ -1156,7 +1156,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-greater-fort-polk-area-realtors
@@ -1179,7 +1179,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-greater-lansing-association-of-realtors
@@ -1203,7 +1203,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-greater-scranton-board-of-realtors
@@ -1226,7 +1226,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-greenbrier-valley-board-of-realtors
@@ -1249,7 +1249,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-greenwich-association-of-realtors
@@ -1273,7 +1273,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-hattiesburg-area-association-of-realtors
@@ -1297,7 +1297,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-havre-hi-line-chapter-of-billings-association-of-realtors
@@ -1321,7 +1321,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-heart-of-missouri-board-of-realtors
@@ -1345,7 +1345,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-hernando-county-association-of-realtors
@@ -1369,7 +1369,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-hive-mls
@@ -1393,7 +1393,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-hudson-valley-catskills-region-multiple-list-service-ulster-county-board-of-realtors
@@ -1416,7 +1416,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-humboldt-association-of-realtors
@@ -1439,7 +1439,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-huron-board-of-realtors
@@ -1462,7 +1462,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-imagine-mls-bluegrass-realtors
@@ -1486,7 +1486,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-iron-county-board-of-realtors
@@ -1510,7 +1510,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-jefferson-city-area-board-of-realtors
@@ -1534,7 +1534,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-key-west-association-of-realtors
@@ -1557,7 +1557,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-lake-havasu-association-of-realtors
@@ -1581,7 +1581,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-lake-martin-area-association-of-realtors
@@ -1605,7 +1605,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-lakeway-area-association-of-realtors
@@ -1629,7 +1629,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-lowcountry-regional-mls-beaufort-jasper-county-realtors
@@ -1653,7 +1653,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-lubbock-association-of-realtors
@@ -1676,7 +1676,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-luzerne-county-association-of-realtors
@@ -1700,7 +1700,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-maine-listings
@@ -1724,7 +1724,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-marathon-and-lower-keys-association-of-realtors
@@ -1747,7 +1747,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-marco-island-area-association-of-realtors
@@ -1771,7 +1771,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-martha-s-vineyard-mls
@@ -1795,7 +1795,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-metro-mls
@@ -1819,7 +1819,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-middle-georgia-mls
@@ -1843,7 +1843,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-mitchell-board-of-realtors
@@ -1866,7 +1866,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-mls-of-southern-arizona
@@ -1890,7 +1890,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-mls-of-yakima-association-of-realtors
@@ -1913,7 +1913,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-mls-united
@@ -1937,7 +1937,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-montana-regional-mls
@@ -1960,7 +1960,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-moremls-monmouth-ocean-regional-realtors
@@ -1984,7 +1984,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-muscatine-multiple-listing-service
@@ -2008,7 +2008,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-navarre-area-board-of-realtors
@@ -2031,7 +2031,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-north-santa-barbara-county-regional-mls
@@ -2055,7 +2055,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northeast-mississippi-board-of-realtors
@@ -2078,7 +2078,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northeast-oklahoma-board-of-realtors
@@ -2102,7 +2102,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northeast-south-dakota-association-of-realtors
@@ -2126,7 +2126,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northeast-washington-association-of-realtors
@@ -2150,7 +2150,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northeast-wyoming-realtor-alliance
@@ -2173,7 +2173,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northern-arizona-association-of-realtors
@@ -2197,7 +2197,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northern-kentucky-multiple-listing-service
@@ -2221,7 +2221,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northern-nevada-regional-mls
@@ -2244,7 +2244,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northwest-indiana-realtors-association
@@ -2267,7 +2267,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-northwest-ohio-real-estate-information-service-noris
@@ -2290,7 +2290,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-oregon-coast-multiple-listing-service
@@ -2313,7 +2313,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-ozark-gateway-association-of-realtors
@@ -2337,7 +2337,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-palm-beach-board-of-realtors
@@ -2361,7 +2361,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-pampa-association-of-realtors
@@ -2384,7 +2384,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-park-city-board-of-realtors
@@ -2408,7 +2408,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-pierre-area-multiple-listing-service-central-south-dakota-board-of-realtors
@@ -2431,7 +2431,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-pike-wayne-association-of-realtors
@@ -2454,7 +2454,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-plainview-association-of-realtors
@@ -2478,7 +2478,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-pocono-mountains-association-of-realtors
@@ -2502,7 +2502,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-prescott-area-association-of-realtors
@@ -2525,7 +2525,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-randolph-county-board-of-realtors
@@ -2549,7 +2549,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-realmls-northeast-florida-multiple-listing-service
@@ -2573,7 +2573,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-roam-mls
@@ -2596,7 +2596,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-roanoke-valley-association-of-realtors
@@ -2620,7 +2620,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-rockbridge-highlands-realtors
@@ -2643,7 +2643,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-ruidoso-lincoln-county-association-of-realtors
@@ -2666,7 +2666,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-san-juan-county-board-of-realtors
@@ -2690,7 +2690,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-santa-barbara-multiple-listing-service
@@ -2714,7 +2714,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-shasta-association-of-realtors
@@ -2738,7 +2738,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-sheridan-county-board-of-realtors
@@ -2761,7 +2761,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-southern-missouri-regional-mls
@@ -2784,7 +2784,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-southern-new-mexico-mls-las-cruces-association-of-realtors
@@ -2807,7 +2807,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-southwest-iowa-association-of-realtors
@@ -2831,7 +2831,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-southwest-mls-greater-albuquerque-association-of-realtors
@@ -2854,7 +2854,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-space-coast-mls-space-coast-association-of-realtors
@@ -2878,7 +2878,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-spanish-peaks-mls
@@ -2902,7 +2902,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-staten-island-multiple-listing-service
@@ -2926,7 +2926,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-sumter-board-of-realtors
@@ -2949,7 +2949,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-sun-valley-board-of-realtors
@@ -2972,7 +2972,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-telluride-association-of-realtors
@@ -2995,7 +2995,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-tennessee-virginia-regional-mls
@@ -3018,7 +3018,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-teton-board-of-realtors
@@ -3042,7 +3042,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-tillamook-board-of-realtors
@@ -3065,7 +3065,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-tulare-county-mls
@@ -3089,7 +3089,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-vail-multi-list-service
@@ -3113,7 +3113,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-washington-county-board-of-realtors
@@ -3137,7 +3137,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-water-wonderland-board-of-realtors
@@ -3160,7 +3160,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-west-branch-valley-association-of-realtors
@@ -3183,7 +3183,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-west-central-association-of-realtors-oh
@@ -3207,7 +3207,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-western-regional-information-systems-technology-wrist
@@ -3231,7 +3231,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-white-mountain-association-of-realtors
@@ -3255,7 +3255,7 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
 - slug: spark-platform-mls-ro
@@ -3278,6 +3278,6 @@
     organization_type: MLS
     vendor_uoi: T00000052
     detected_by: sweep-real-estate.py
-    detected: '2026-10-13'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
