@@ -3281,3 +3281,34 @@
     detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
+- slug: spark-platform-rubygems
+  label: RubyGems
+  partner: rubygems
+  partner_name: RubyGems
+  category: official SDK (Ruby)
+  type: register
+  channel: package-registry
+  evidence: https://rubygems.org/gems/spark_api
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: RubyGems (public registry JSON)
+    spec_file: null
+    language: Ruby
+    packages:
+    - name: spark_api
+      version: 2.0.3
+      released: '2026-05-08'
+      released_field: version_created_at
+      lapsed: false
+      page: https://rubygems.org/gems/spark_api
+      repo_leg: github-org:sparkapi
+      publisher_leg: org:sparkapi
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
