@@ -1,4 +1,4 @@
-# Spark Platform (spark-platform)
+# Spark Platform
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,126 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Spark Platform is the MLS data platform built by FBS, a 100% employee-owned company in Fargo, North Dakota that has served the US Multiple Listing Service industry for over 30 years and operates the Flexmls MLS system for more than 120 MLS organizations. Spark sits in the distribution layer of US residential real estate, exposing MLS content to third-party developers through a proprietary Spark API and a RESO Web API OData implementation. FBS is a RESO Certified technology provider (UOI T00000052) and is the certifying provider on RESO Web API Core 2.0.0 and Data Dictionary 1.7 / 2.0 endorsements for 138 MLS organizations. The documentation is fully public and the endpoints are live, but every data endpoint — including the OData `$metadata` contract — returns HTTP 401 without an MLS-approved key. Certification here is real; reachability is licensed.
+Spark Platform is the MLS data platform built by FBS, a 100% employee-owned company in Fargo, North Dakota that has served the US Multiple Listing Service industry for over 30 years and operates the Flexmls MLS system for more than 120 MLS organizations. Spark sits in the distribution layer of US residential real estate: it takes MLS content out of Flexmls and exposes it to third-party developers through two documented interfaces — the proprietary Spark API (https://sparkapi.com/v1, SparkQL filtering, listings, contacts, saved searches, market statistics, portals/VOW accounts) and a RESO Web API implementation at the /Reso/OData endpoint (https://replication.sparkapi.com/Version/3/Reso/OData/) serving Property, Member, Office, Media, OpenHouse, Room, Unit, GreenVerification, PowerProduction and Lookup resources against the RESO Data Dictionary. FBS is a RESO Certified technology provider (Unique Organization Identifier T00000052, status "Certified Current") and appears as the certifying provider on RESO Web API Core 2.0.0 and Data Dictionary 1.7 / 2.0 endorsements for 138 MLS organizations plus one commercial board in the public RESO organizations feed; FBS itself additionally holds RESO webhooks 1.0.0 and RESO Common Format 2.0 endorsements. The API posture must be stated honestly: the documentation is genuinely public and unusually complete, developer registration is a free public form, and the endpoints are live — but they are not open. Every probed data endpoint, including the OData $metadata document, returns HTTP 401 "Invalid API key and/or request signed improperly" anonymously. Real data requires a Developer Agreement with FBS, an MLS-approved data plan purchased through the Spark Datamart under an IDX, VOW or Private role, and a per-MLS fee. Certification here is real and verifiable; reachability is licensed. Home market is the United States.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/spark-platform/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/spark-platform/refs/heads/main/apis.yml)
+**Areas:** Real Estate · United States · MLS · RESO · Property Listings · IDX · PropTech · Listing Data Infrastructure · OData
 
-## Tags
+## Spark Platform on APIs.io
 
-- Real Estate
-- United States
-- MLS
-- RESO
-- Property Listings
-- IDX
-- PropTech
-- Listing Data Infrastructure
-- OData
+Everything profiled for Spark Platform is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/spark-platform/](https://apis.io/providers/spark-platform/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (3)
 
-- **Created:** 2026-07-26
-- **Modified:** 2026-07-26
+- [Spark API](https://apis.io/apis/spark-platform/spark-api/) — FBS's proprietary REST API over Flexmls MLS content. Documented services include Listings (plus photos, documents, floor plans, videos, virtual tours, open…
+- [Spark RESO Web API](https://apis.io/apis/spark-platform/spark-reso-web-api/) — Spark's implementation of the RESO Web API, exposed as an OData service at the /Reso/OData endpoint and serving data shaped by the RESO Data Dictionary.…
+- [Spark Webhooks](https://apis.io/apis/spark-platform/spark-webhooks/) — Outbound webhook delivery from the Spark platform. When a Property, Member or Office record changes in an upstream MLS, Spark POSTs a RESO Web API Entity…
 
-## APIs
+### Published properties
 
-### Spark API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-FBS's proprietary REST API over Flexmls MLS content — listings and their photos, documents, floor plans, videos, virtual tours, open houses, rooms, units, history and rules, plus contacts, saved searches, listing carts, portals/VOW accounts, market statistics, overlays, standard and custom field metadata, system info, and a developers service for keys, roles, domains and usage. Filtering uses SparkQL. Anonymous requests return HTTP 401.
+#### AsyncAPI (1)
 
-- **Human URL:** [https://sparkplatform.com/docs/overview/api](https://sparkplatform.com/docs/overview/api)
-- **Base URL:** `https://sparkapi.com/v1`
+Event-driven and webhook contracts.
 
-#### Tags
+- [Spark Platform Webhooks](https://apis.io/asyncapis/spark-platform/spark-platform-webhooks/)
 
-- MLS
-- Property Listings
-- Real Estate
-- IDX
+#### Collections (1)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://sparkplatform.com/docs)
-- [API Reference](https://sparkplatform.com/docs/api_services/read_first)
-- [Documentation](https://sparkplatform.com/docs/api_services/listings)
-- [Documentation](https://sparkplatform.com/docs/api_services/market_statistics)
-- [Documentation](https://sparkplatform.com/docs/supporting_documentation/sparkql_grammar)
-- [Documentation](https://sparkplatform.com/docs/supporting_documentation/search_and_paging_syntax)
-- [Authentication](https://sparkplatform.com/docs/authentication/access_token)
-- [Sign Up](https://sparkplatform.com/register/developers)
-- [Terms of Service](https://sparkplatform.com/docs/terms_of_use/developer_agreement_and_terms_of_use)
+- [Spark Web API Queries](https://apis.io/collections/spark-platform/postman-spark-platform-spark-web-api-queries/)
 
-### Spark RESO Web API
+#### Security (2)
 
-Spark's implementation of the RESO Web API, exposed as an OData service at the `/Reso/OData` endpoint against the RESO Data Dictionary. Resources are Property, Member, Office, Media, OpenHouse, Room, Unit, Green Verification, Power Production and Lookup. The `$metadata` document is the machine-readable contract but returned HTTP 401 on 2026-07-26.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://sparkplatform.com/docs/reso/overview](https://sparkplatform.com/docs/reso/overview)
-- **Base URL:** `https://replication.sparkapi.com/Version/3/Reso/OData/`
+- [Spark Platform Authentication](https://apis.io/security/spark-platform/spark-platform-authentication/)
+- [Spark Platform Domain Security](https://apis.io/security/spark-platform/spark-platform-domain-security/)
 
-#### Tags
+#### OAuth scopes (1)
 
-- RESO
-- OData
-- MLS
-- Property Listings
-- Real Estate
+The permissions the API asks for.
 
-#### Properties
+- [Spark Platform Scopes](https://apis.io/scopes/spark-platform/spark-platform-scopes/)
 
-- [Documentation](https://sparkplatform.com/docs/reso/overview)
-- [API Reference](https://sparkplatform.com/docs/reso/properties)
-- [Documentation](https://sparkplatform.com/docs/reso/request_parameters)
-- [Documentation](https://sparkplatform.com/docs/reso/reso_replication)
-- [Documentation](https://sparkplatform.com/docs/supporting_documentation/reso_dictionary)
-- [Authentication](https://sparkplatform.com/docs/authentication/access_token)
+#### Rate limits (1)
 
-### Spark Webhooks
+Published request limits.
 
-Outbound webhook delivery. When a Property, Member or Office record changes in an upstream MLS, Spark POSTs a RESO Web API Entity Event payload over HTTPS, signed with HMAC-SHA256 in a `Signature` header, with up to 3 retries and a roughly 2-second response timeout. FBS holds a RESO webhooks 1.0.0 certification endorsement for this surface.
+- [Spark Platform Rate Limits](https://apis.io/rate-limits/spark-platform/spark-platform-rate-limits/)
 
-- **Human URL:** [https://sparkplatform.com/docs/webhooks/webhooks](https://sparkplatform.com/docs/webhooks/webhooks)
+## Where to find this API
 
-#### Tags
-
-- Webhooks
-- RESO
-- MLS
-- Real Estate
-
-#### Properties
-
-- [Documentation](https://sparkplatform.com/docs/webhooks/webhooks)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.sparkapi.io/)
 - [Documentation](https://sparkplatform.com/docs)
-- [Sign Up](https://sparkplatform.com/register/developers)
-- [GitHub Organization](https://github.com/sparkapi)
-- [Authentication](https://sparkplatform.com/docs/authentication/authentication)
-- [OpenID Connect Discovery](authentication/spark-platform-openid-configuration.json)
-- [JSON Web Key Set](authentication/spark-platform-openid-jwks.json)
-- [Terms of Service](https://sparkplatform.com/docs/terms_of_use/developer_agreement_and_terms_of_use)
-- [Privacy Policy](https://sparkplatform.com/docs/terms_of_use/privacy)
+- [Getting started](https://sparkplatform.com/docs/overview/set_up_access)
+- [API reference](https://sparkplatform.com/docs/api_services/read_first)
 - [Pricing](https://www.sparkapi.io/developers/)
-- [Certification](https://services.reso.org/orgs?showStats=true&showEndorsements=true)
+- [Sign up](https://sparkplatform.com/register/developers)
+- [Support](https://www.sparkapi.io/contact/)
+- [Blog](https://www.sparkapi.io/blog/)
+- [Compliance](https://services.reso.org/orgs?showStats=true&showEndorsements=true)
+- [Terms of service](https://sparkplatform.com/docs/terms_of_use/developer_agreement_and_terms_of_use)
+- [Privacy policy](https://sparkplatform.com/docs/terms_of_use/privacy)
+- [GitHub](https://github.com/sparkapi)
 
-## RESO Posture
+## API Evangelist rating
 
-- **Certified:** yes, via FBS as the certifying technology provider (RESO UOI `T00000052`, status "Certified Current").
-- **Endorsements held by FBS itself:** RESO webhooks 1.0.0 (Certified) and RESO Common Format 2.0 (Certified).
-- **Endorsements where FBS is the recorded provider:** 140 organizations (138 MLSs, 1 commercial board, FBS itself) — Web API Core 2.0.0 (115 Certified / 24 Passed), Data Dictionary 1.7 (110 / 19) and Data Dictionary 2.0 (72 / 17).
-- **Evidence:** the RESO Organizations and Endorsements feed at `https://services.reso.org/orgs?showStats=true&showEndorsements=true` (HTTP 200, generated 2026-07-26).
-- **Reachability:** the live OData service root and the `$metadata` document both return HTTP 401 `Invalid API key and/or request signed improperly`. Certified, not callable.
+**Kin Score 54.8** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Access Gate
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 45.3 |
+| Contract governance | 18.2 |
+| Operational transparency | 42.1 |
+| Developer ergonomics | 69.0 |
+| Access clarity | 52.6 |
 
-- **Classification:** `licence-agreement`.
-- Stage one is free and self-serve: a public registration form at `https://sparkplatform.com/register/developers`, reviewed and activated within three business days, yielding demo credentials.
-- Stage two is licensed: a signed FBS Developer Agreement, an IDX / VOW / Private role assignment binding the developer to that MLS's rules, and enrolment in an MLS-specific data plan through the Spark Datamart via a "PURCHASE WITH APPROVAL" action the MLS must approve. Where no plan exists, the developer must contact the MLS directly.
-- **Published pricing:** a flat 50 USD per month per MLS.
-- **Open data:** none. All listing content is licensed MLS Content.
+**Agent readiness 26.4** — agent-aware
 
-## Maintainers
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
 
-- Kin Lane — kin@apievangelist.com
+**Regulatory alignment 39.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/spark-platform/](https://apis.io/providers/spark-platform/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Spark Platform: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/spark-platform/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
